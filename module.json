@@ -1,18 +1,13 @@
 {
     "id": "npc-generator-dnd5e-eldore",
     "title": "NPC Generator for DnD5e (Eldore)",
-    "description": "Generate NPCs on the fly wich this dynamic NPC generator. Including names and character sheets, all randomly generated using an explendid algorithm.",
-    "version": "1.28.3",
-    "authors": [
-        {
-            "name": "Mad Wizard",
-            "discord": "mad.wizard"
-        }
-    ],
-    "url": "https://github.com/elizeuangelo/fvtt-module-npc-generator-dnd5e-faq",
-    "bugs": "https://github.com/elizeuangelo/fvtt-module-npc-generator-dnd5e-faq/issues",
-    "readme": "https://raw.githubusercontent.com/elizeuangelo/fvtt-module-npc-generator-dnd5e-faq/master/README.md",
-    "changelog": "https://raw.githubusercontent.com/elizeuangelo/fvtt-module-npc-generator-dnd5e-faq/master/CHANGELOG.md",
+    "description": "Generate D&D 5e NPCs with configurable HP, equipment, spells, portrait and token matching, and generic batches.",
+    "version": "1.28.4",
+    "authors": [],
+    "url": "https://github.com/TaylorBeebe/foundry_npc_generator",
+    "bugs": "https://github.com/TaylorBeebe/foundry_npc_generator/issues",
+    "readme": "https://github.com/TaylorBeebe/foundry_npc_generator/blob/HEAD/CLAUDE.md",
+    "changelog": "https://github.com/TaylorBeebe/foundry_npc_generator/blob/HEAD/CHANGELOG-eldore.md",
     "esmodules": [
         "main.js"
     ],

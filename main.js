@@ -24,6 +24,8 @@ async function ready() {
         app,
         create: NPCDraft.create,
     };
+    const { registerMcpQuery } = await import('./module/mcp.js');
+    registerMcpQuery();
     Hooks.on('renderActorDirectory', (_app, html) => {
         const btn = jQuery(`<button class="generate-npc-btn" type="button"><i class="fas fa-users-cog"></i> Generate NPC</button>`);
         html.querySelector('.generate-npc-btn')?.remove();

@@ -16,6 +16,10 @@ test('dialog controls reach the created actor and token documents', () => {
     assert.match(run(['tools/hp-check.mjs', '--dialog']), /Dialog checks passed/);
 });
 
+test('MCP bridge enforces write permissions and creates an Eldore actor', () => {
+    assert.match(run(['tools/hp-check.mjs', '--mcp']), /MCP checks passed/);
+});
+
 test('Low HP and Foundry integration mocks, including Portrait Studio names', () => {
     const output = run(['tools/hp-check.mjs', '--verify', '--smoke']);
     assert.match(output, /Smoke checks passed/);

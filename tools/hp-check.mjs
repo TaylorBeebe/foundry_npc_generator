@@ -178,6 +178,46 @@ const { NPCDraft } = await imp('module/generator/npcdraft.js');
 utils.searchPacks();
 utils.updatePacks();
 
+if (args.mcp) {
+    const { registerMcpQuery } = await imp('module/mcp.js');
+    const query = 'npc-generator-dnd5e-eldore.generateNPC';
+    globalThis.CONFIG = { queries: {} };
+    registerMcpQuery();
+    assert.equal(CONFIG.queries[query], undefined);
+    game.modules = new Map([['foundry-mcp-bridge', { active: true }]]);
+    game.system = { id: 'dnd5e' };
+    game.user.hasPermission = (permission) => permission === 'ACTOR_CREATE';
+    game.folders.get = (id) => id === 'npc-folder' ? { id, type: 'Actor' } : undefined;
+    registerMcpQuery();
+    const generate = CONFIG.queries[query];
+    const config = { firstName: 'Avery', race: 'human', job: 'guard', cr: '1/2', hpLevel: 'low', folderId: 'npc-folder' };
+    await assert.rejects(generate(config), /write operations/);
+    settings.allowWriteOperations = true;
+    game.user.isGM = false;
+    await assert.rejects(generate(config), /requires a Foundry GM/);
+    game.user.isGM = true;
+    await assert.rejects(generate(config, 'remote-user'), /MCP Bridge/);
+    await assert.rejects(generate({ ...config, race: 'drow', cr: 21 }), /CR must be/);
+    await assert.rejects(generate({ ...config, job: '__proto__' }), /Unknown job/);
+    let saved;
+    globalThis.Actor = {
+        async create(data) {
+            saved = structuredClone(data);
+            return { ...data, id: 'actor-id', uuid: 'Actor.actor-id', async createEmbeddedDocuments() {} };
+        },
+    };
+    const result = await generate(config);
+    assert.equal(result.id, 'actor-id');
+    assert.equal(result.uuid, 'Actor.actor-id');
+    assert.equal(result.name, 'Avery');
+    assert.equal(result.cr, 0.5);
+    assert.equal(result.hp, saved.system.attributes.hp.max);
+    assert.equal(saved.folder, 'npc-folder');
+    assert.equal(saved.flags.npcgen.hpLevel, 'low');
+    log('MCP checks passed.');
+    process.exit(0);
+}
+
 if (args.dialog) {
     const { checkDialog } = await import('./dialog-check.mjs');
     const template = fs.readFileSync(path.join(moduleDir, 'templates/menu.html'), 'utf8');

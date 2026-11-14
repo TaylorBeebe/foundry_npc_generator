@@ -19,3 +19,11 @@ Foundry VTT module for generating dnd5e NPCs. It is based on Mad Wizard's NPC Ge
 
 - Bump the version in `module.json`, then push the matching version tag. GitHub Actions runs the tests and publishes the manifest and module ZIP.
 - In The Forge, install Eldore as a custom module using [the stable manifest URL](https://github.com/TaylorBeebe/foundry_npc_generator/releases/latest/download/module.json). Enable only one NPC Generator at a time.
+
+## Foundry MCP
+
+With Eldore and Foundry MCP Bridge active in a D&D 5e world, `eldore_generate_npc` creates one actor using Eldore's rules. The connected Foundry session must be a GM and the bridge's **Allow Write Operations** setting must be enabled.
+
+For Foundry MCP Server 0.8.3 on Windows, run `node tools/install-eldore-mcp.cjs "<path to packages/mcp-server>"` and fully restart Claude Desktop. Add `--check` to inspect compatibility without changing the backend. The installer saves `dist/backend.bundle.cjs.eldore-original` alongside the modified file. Recheck compatibility after updating Foundry MCP.
+
+Example request to Claude: “Use eldore_generate_npc to create a female dwarf bard named Luna Stone at CR 3 with Low HP.”
