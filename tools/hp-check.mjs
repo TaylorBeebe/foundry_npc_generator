@@ -178,6 +178,14 @@ const { NPCDraft } = await imp('module/generator/npcdraft.js');
 utils.searchPacks();
 utils.updatePacks();
 
+if (args.dialog) {
+    const { checkDialog } = await import('./dialog-check.mjs');
+    const template = fs.readFileSync(path.join(moduleDir, 'templates/menu.html'), 'utf8');
+    await checkDialog({ imp, template, settings, seeder: utils.seeder });
+    log('Dialog checks passed.');
+    process.exit(0);
+}
+
 const median = (a) => {
     const s = [...a].sort((x, y) => x - y);
     return s.length ? s[~~(s.length / 2)] : NaN;

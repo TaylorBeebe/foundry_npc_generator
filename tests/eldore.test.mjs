@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { access, mkdtemp, readFile, rm } from 'node:fs/promises';
+import { access, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
@@ -11,6 +11,10 @@ function run(args, env = process.env) {
     assert.equal(result.status, 0, result.stderr + result.stdout);
     return result.stdout;
 }
+
+test('dialog controls reach the created actor and token documents', () => {
+    assert.match(run(['tools/hp-check.mjs', '--dialog']), /Dialog checks passed/);
+});
 
 test('Low HP and Foundry integration mocks, including Portrait Studio names', () => {
     const output = run(['tools/hp-check.mjs', '--verify', '--smoke']);
@@ -52,6 +56,41 @@ test('release manifest points to the versioned ZIP and bundles runtime files', a
         await access(join(folder, path));
     for (const path of ['tools', 'tests', 'imgs'])
         await assert.rejects(access(join(folder, path)), { code: 'ENOENT' });
+    const archive = join(output, source.id + '.zip');
+    const manifestPath = join(output, 'module.json');
+    const zip = () => {
+        const windows = process.platform === 'win32';
+        const result = spawnSync(windows ? 'tar.exe' : 'zip',
+            windows ? ['-a', '-cf', archive, source.id] : ['-qr', archive, source.id],
+            { cwd: output, encoding: 'utf8' });
+        assert.ifError(result.error);
+        assert.equal(result.status, 0, result.stderr + result.stdout);
+    };
+    const verifier = ['tools/verify-release.mjs', archive, manifestPath];
+    zip();
+    assert.match(run(verifier), /Verified release ZIP/);
+
+    const checkInvalid = (message) => {
+        const result = spawnSync(process.execPath, verifier, { encoding: 'utf8' });
+        assert.ifError(result.error);
+        assert.notEqual(result.status, 0);
+        assert.match(result.stderr, message);
+    };
+
+    await writeFile(manifestPath, remote + ' ');
+    checkInvalid(/ZIP manifest differs/);
+    await writeFile(manifestPath, remote);
+
+    await writeFile(join(folder, 'module', 'private-art.webp'), '');
+    await rm(archive);
+    zip();
+    checkInvalid(/Unexpected file in release/);
+    await rm(join(folder, 'module', 'private-art.webp'));
+    await rm(join(folder, 'packs', 'features'), { recursive: true });
+    await rm(archive);
+    zip();
+    checkInvalid(/ZIP is missing packs\/features/);
+
     const wrongVersion = spawnSync(process.execPath, ['tools/build-release.mjs', output], {
         encoding: 'utf8', env: { ...env, ELDORE_VERSION: '0.0.0' },
     });

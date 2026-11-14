@@ -38,7 +38,7 @@ jobs:
           REQUESTED_VERSION: ${{ inputs.version }}
         run: |
           zip -qr npc-generator-dnd5e-eldore.zip npc-generator-dnd5e-eldore
-          unzip -tq npc-generator-dnd5e-eldore.zip
+          node ../tools/verify-release.mjs npc-generator-dnd5e-eldore.zip module.json
           if [[ "$GITHUB_REF_TYPE" == tag ]]; then
             gh release create "$GITHUB_REF_NAME" --verify-tag --latest --generate-notes module.json npc-generator-dnd5e-eldore.zip
           else
