@@ -1,0 +1,13 @@
+{
+  "name": "npc-generator-dnd5e-eldore",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:matrix": "node tools/hp-check.mjs --matrix --seeds=2 --verify",
+    "build:release": "node tools/build-release.mjs"
+  }
+}

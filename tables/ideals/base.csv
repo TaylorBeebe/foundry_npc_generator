@@ -1,0 +1,461 @@
+"<b>Tradition</b>. The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful)",1,acolyte,,lawful
+"<b>Charity</b>. I always try to help those in need, no matter what the personal cost. (Good)",1,acolyte
+"<b>Change</b>. We must help bring about the changes the gods are constantly working in the world. (Chaotic)",1,acolyte,,chaotic
+"<b>Power</b>. I hope to one day rise to the top of my faith’s religious hierarchy. (Lawful)",1,acolyte,,lawful
+"<b>Faith</b>. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well. (Lawful)",1,acolyte,,lawful
+"<b>Aspiration</b>. I seek to prove myself worthy of my god’s favor by matching my actions against his or her teachings.",1,acolyte
+"<b>Companionship</b>. Animals lift my spirit and bring me joy. (Good)",1,animal whisperer
+"<b>Compassion</b>. Animals have preferences and feel pain too. I should treat them with kindness. (Good)",1,animal whisperer
+"<b>Domination</b>. Animals are my inferiors and must be made to submit, even if it requires using a heavy hand. (Evil)",1,animal whisperer,,evil
+"<b>Responsibility</b>. My beast of burden relies on me as its owner. I should provide adequately for its needs. (Lawful)",1,animal whisperer,,lawful
+"<b>Showmanship</b>. I can train an animal to do anything I want. (Chaotic)",1,animal whisperer,,chaotic
+"<b>Stand Your Ground</b>. Animals can smell my fear. (Neutral)",1,animal whisperer,,neutral
+"<b>Power</b>. Some say knowledge is power; Knowledge lets me know that power is power. I seek to concentrate as much in my hands as I can.",1,antiquarian
+"<b>Wealth</b>. I have lived at the bottom for to long, I will have wat I am owed.",1,antiquarian
+"<b>Knowledge</b>. Only through knowledge can we unravel the mysteries of the past.",1,antiquarian
+"<b>Order</b>. It’s easier to get work done when things are well ordered.",1,antiquarian
+"<b>Fame</b>. I wish to become renowned for my discoveries.",1,antiquarian
+"<b>Victory</b>. History helps us see where we went wrong, and how to correct these mistakes in the battles to come.",1,antiquarian
+"<b>Greed</b>. I do what I have to do to get money. You can’t live without it.",1,arena fighter
+"<b>Honor</b>. Those who stand by my side in battle are my brothers, and I will do anything for them.",1,arena fighter
+"<b>Subterfuge</b>. Sometimes the only way to win is to fight dirty.",1,arena fighter
+"<b>Survival</b>. Every day tries to kill you, but the determined and the competent learn how to stay alive.",1,arena fighter
+"<b>Bravery</b>. I will stand up to that which threatens me and I will not flinch from danger.",1,arena fighter
+"<b>Reverent</b>. I give the gods their due, for I will be meeting them soon enough.",1,arena fighter
+"<b>Revenge</b>. I seek to cruelly punish those who have wronged me",1,auxiliary
+"<b>Duty</b>. Though no longer serving, I still seek to uphold the Empire’s stability.",1,auxiliary
+"<b>Glory</b>. I want to help expand the Empire to new heights.",1,auxiliary
+"<b>Honor</b>. I seek to find a worthy cause to fight for.",1,auxiliary
+"<b>Protector</b>. No matter where I am, I strive to help those in need.",1,auxiliary
+"<b>Consumed by loss</b>. I wander the lands a broken warrior, fighting, stealing, and killing as I need.",1,auxiliary
+"<b>Beauty</b>. There is beauty in nature. I see it in the uniqueness of every flower. (Neutral)",1,bee keeper,,neutral
+"<b>Cooperation</b>. When I give my best effort to the team, we all succeed. (Good)",1,bee keeper,,good
+"<b>Diligence</b>. My hard work results in a superior product. (Lawful)",1,bee keeper,,lawful
+"<b>Flattery</b>. Flattery is an art form. If I tell a person what they want to hear, even if I have to stretch the truth, they’re more likely to give me what I want. (Chaotic)",1,bee keeper,,chaotic
+"<b>Productivity</b>. Staying busy is good for business, and good business means more money for me.",1,bee keeper
+"<b>Status</b>. Station matters. I’ll do whatever it takes to become the queen bee, even if others are harmed in the process. (Evil)",1,bee keeper,,evil
+"<b>Power</b>. Chaos is the true power behind the universe and with it we can become gods ourselves.",1,chaos cultist
+"<b>Freedom</b>. I seek to free humanity from the shackles of the gods who torment us.",1,chaos cultist
+"<b>Insanity</b>. I am completely deranged and will lash out randomly.",1,chaos cultist
+"<b>Sacrifice</b>. Anyone who must die to further the cause is a sacrifice to Chaos.",1,chaos cultist
+"<b>Revenge</b>. This world has wronged me and I will see it undone.",1,chaos cultist
+"<b>War</b>. I seek to create the chaos of war wherever I can.",1,chaos cultist
+"<b>Glory</b>. To be showered in fame and renown is all I desire.",1,competitor
+"<b>Freedom</b>. To be able to compete where I want, when I want, with no restrictions.",1,competitor
+"<b>Wealth</b>. I want to make my fortune and live a lavish life.",1,competitor
+"<b>Promise</b>. I made a promise to be the best there ever was.",1,competitor
+"<b>Peace</b>. Friendly competition is a far better use of time than war.",1,competitor
+"<b>War</b>. The strongest bodies make for the best soldiers.",1,competitor
+"<b>Wealth</b>. Enough coin to never work again.",1,concubine
+"<b>Freedom</b>. The people should be free to make their own choices without the lords and kings of the world.",1,concubine
+"<b>Privileges</b>. The upper classes have powers and privilege that I covet.",1,concubine
+"<b>Comfort</b>. To live comfortably and safely is the most one can ask.",1,concubine
+"<b>Peace</b>. War is bad for business.",1,concubine
+"<b>Lust</b>. It’s nothing to be ashamed of.",1,concubine
+"<b>Family</b>. My family, whether the one I come from or the one I make, is the thing in this world most worth protecting.",1,court servant
+"<b>Service</b>. I am most rewarded when I know I have performed a valuable service for another. (Good)",1,court servant,,good
+"<b>Sloth</b>. What’s the point of helping anyone now that I’ve been discarded? (Chaotic)",1,court servant,,chaotic
+"<b>Compassion</b>. I can’t resist helping anyone in need. (Good)",1,court servant,,good
+"<b>Tradition</b>. Life under my master’s rule was best, and things should be kept as close to their ideals as possible. (Lawful)",1,court servant,,lawful
+"<b>Joy</b>. The pursuit of happiness is the only thing worth serving anymore. (Neutral)",1,court servant,,neutral
+"<b>Respect</b>. I respect those I meet, at least until they prove to me that I shouldn’t.",1,desert nomad
+"<b>Community</b>. My clan or tribe gave me life, and I shall protect them to my last breath.",1,desert nomad
+"<b>Learning</b>. One should never take for granted the mysteries of the universe, nor should one fail to learn more about it when given the chance.",1,desert nomad
+"<b>Daring</b>. Life is short, so do not be deterred from your goals by danger.",1,desert nomad
+"<b>Kindness</b>. Showing kindness to a stranger in need is its own reward.",1,desert nomad
+"<b>Virtue</b>. A virtuous life needs not for material possessions.",1,desert nomad
+"<b>Greater Good</b>. The needs of the whole tribe outweigh those of the individuals who are part of it. (Good)",1,desert runner,,good
+"<b>Nature</b>. I must do what I can to protect the beautiful wilderness from those who would do it harm. (Neutral)",1,desert runner,,neutral
+"<b>Tradition</b>. I am duty-bound to follow my tribe’s age-old route through the desert. (Lawful)",1,desert runner,,lawful
+"<b>Change</b>. Things seldom stay the same and we must always be prepared to go with the flow. (Chaotic)",1,desert runner,,chaotic
+"<b>Honor</b>. If I behave dishonorably, my actions will bring shame upon the entire tribe. (Lawful)",1,desert runner,,lawful
+"<b>Greed</b>. Seize what you want if no one gives it to you freely. (Evil)",1,desert runner,,evil
+"<b>Inevitability</b>. What’s coming can’t be stopped, and I’m dedicated to making it happen. (Evil)",1,destined,,evil
+"<b>Tradition</b>. I’m part of a cycle that has repeated for generations. I can’t deny that.",1,destined
+"<b>Defiance</b>. No one can make me be something I don’t want to be.",1,destined
+"<b>Greater Good</b>. Completing my duty ensures the betterment of my family, community, or region. (Good)",1,destined,,good
+"<b>Power</b>. If I can take this role and be successful, I’ll have opportunities to do whatever I want. (Chaotic)",1,destined,,chaotic
+"<b>Responsibility</b>. It doesn’t matter if I want it or not; it’s what I’m supposed to do. (Lawful)",1,destined,,lawful
+"<b>Harmony</b>. I want everyone to get along. (Good)",1,diplomat,,good
+"<b>Contractual</b>. When I resolve a conflict, I ensure all parties formally acknowledge the resolution. (Lawful)",1,diplomat,,lawful
+"<b>Selfishness</b>. I use my way with words to benefit myself the most. (Evil)",1,diplomat,,evil
+"<b>Freedom</b>. Tyranny is a roadblock to compromise. (Chaotic)",1,diplomat,,chaotic
+"<b>Avoidance</b>. A kind word is preferable to the drawing of a sword.",1,diplomat
+"<b>Unity</b>. It is possible to achieve a world without borders and without conflict.",1,diplomat
+"<b>Friendship</b>. Material possessions come and go, bonds between people are for life. (Good)",1,drifter,,good
+"<b>Sincerity (lawful).The eyes are the mirror of the soul, mine are a transparent glass that shows how I feel. (Lawful)",1,drifter,,lawful
+"<b>Power</b>.if I become powerful, I can have what I want. In fact, what I deserve! (Evil)",1,drifter,,evil
+"<b>Emotional</b>. Emotions must be left free to express themselves. (Chaotic)",1,drifter,,chaotic
+"<b>Live and let live</b>. Hanging on to other people’s affairs only brings trouble. (Neutral)",1,drifter,,neutral
+"<b>Quid pro Quo</b>. I help those who help me. Isn’t it simple? (Neutral)",1,drifter,,neutral
+"<b>Prevarication</b>. Life is all about eating or being eaten, and I am not prey. (Evil)",1,drifter,,evil
+"<b>Memory</b>. I have to keep my people’s traditions alive, or soon they will be lost forever. (Lawful)",1,drifter,,lawful
+"<b>Self-improvement</b>. The purpose of life is to never stop learning, honing, and improving. (Neutral)",1,drifter,,neutral
+"<b>Introspection</b>. The only true answers to the questions of life are those found within. (Neutral)",1,drifter,,neutral
+"<b>Relativism</b>. Truth depends on the point of view of each one of us, everyone has the right to their own truth. (Chaotic)",1,drifter,,chaotic
+"<b>Empathy</b>. I acknowledge my own suffering in the eyes of others, and this encourages me to help others. (Good)",1,drifter,,good
+"<b>Exploration</b>. There is so much to uncover, buried beneath the sands.",1,dune runner
+"<b>Freedom</b>. Though harsh, the dunes offer a place where no lord will seek you out.",1,dune runner
+"<b>Unity</b>. The desert is no place to be alone.",1,dune runner
+"<b>Hard work</b>. The desert is harsh, only those who work for it will survive.",1,dune runner
+"<b>Peace</b>. The dunes have long since drunk their fill of blood.",1,dune runner
+"<b>War</b>. The dunes make the perfect environment for hit and run tactics against the unknowing.",1,dune runner
+"<b>Balance</b>. Balance of the body’s elements is the ultimate goal. I must always strive to guide the body to a state of homeostasis. (Neutral)",1,elemental conduit,,neutral
+"<b>Compassion</b>. I treat as gently as I can and cause as little harm as possible. (Good)",1,elemental conduit,,good
+"<b>Excellence</b>. I will accept only my best efforts to heal my patients. (Lawful)",1,elemental conduit,,lawful
+"<b>Greed</b>. Everybody needs to make a living. I’m not healing folks for free. (Evil)",1,elemental conduit,,evil
+"<b>Recognition</b>. My name is my reputation. Who doesn’t want to be known as the best? (Chaotic)",1,elemental conduit,,chaotic
+"<b>Study</b>. The more I learn about energy and anatomy, the more effectively I can treat my patient.",1,elemental conduit
+"<b>Freedom</b>. Better to die free than to live on your knees.",1,escaped slave
+"<b>Knowledge</b>. Ignorance is the strongest chain of all.",1,escaped slave
+"<b>Power</b>. Through power and control, I guarantee my lasting freedom.",1,escaped slave
+"<b>Independence</b>. I decide what I will do. No one else will ever give me orders again.",1,escaped slave
+"<b>Responsibility</b>. We all should help those who cannot help themselves.",1,escaped slave
+"<b>Retribution</b>. Those who own slaves should be clapped in chains and worked until they bleed.",1,escaped slave
+"<b>Honor</b>. Honestly, I deserve to be exiled (Lawful).",1,exiled,,lawful
+"<b>Freedom</b>. Liberated from the constraints of society, I am finally free to do as I please.",1,exiled
+"<b>People</b>. I am loyal to my kin and my tribe, not an ideal.",1,exiled
+"<b>Political</b>. I believe in my political positions and will die for them.",1,exiled
+"<b>Redemption</b>. Exile has helped me see the good in everyone.",1,exiled
+"<b>Aspiration</b>. I will find a way to return home.",1,exiled
+"<b>Family</b>. My family and community need to eat. (Good)",1,farmer,,good
+"<b>Nature</b>. By cultivating our crops and herds, we reap a thriving harvest. (Lawful)",1,farmer,,lawful
+"<b>Simplicity</b>. The simple life provides all the necessities. (Neutral)",1,farmer,,neutral
+"<b>Tradition</b>. Family, friends, work, and fun, these are the best ways to fill the passing seasons. (Neutral)",1,farmer,,neutral
+"<b>Community</b>. I always help my neighbors, you never know when you may need a favor returned. (Good)",1,farmer,,good
+"<b>Exploitation</b>. I extract every last bit of value from my land and herds. (Evil)",1,farmer,,evil
+"<b>Change</b>. As the seasons shift, so too does the world around us. To resist is futile and anathema to the natural order. (Chaotic)",1,forest dweller,,chaotic
+"<b>Conservation</b>. All life should be preserved and, if needed, protected. (Good)",1,forest dweller,,good
+"<b>Acceptance</b>. I am a part of my forest, no different from any other flora and fauna. To think otherwise is arrogance and folly. When I die, it will be as a leaf falling in the woods. (Neutral)",1,forest dweller,,neutral
+"<b>Cull</b>. The weak must be removed for the strong to thrive. (Evil)",1,forest dweller,,evil
+"<b>Candor</b>. I am open, plain, and simple in life, word, and actions.",1,forest dweller
+"<b>Balance</b>. The forest does not lie. The beasts do not create war. Equity in all things is the way of nature. (Neutral)",1,forest dweller,,neutral
+"<b>Strength</b>. Experience tells me there are no rules to war. Only victory matters. (Evil)",1,former adventurer,,evil
+"<b>Growth</b>. I strive to improve myself and prove my worth to my companions—and to myself.",1,former adventurer
+"<b>Thrill</b>. I am only happy when I am facing danger with my life on the line.",1,former adventurer
+"<b>Generous</b>. If I can help someone in danger, I will. (Good)",1,former adventurer,,good
+"<b>Ambition</b>. I may have lost my renown, but nothing will stop me from reclaiming it. (Chaotic)",1,former adventurer,,chaotic
+"<b>Responsibility</b>. Any cost to myself is far less than the price of doing nothing. (Lawful)",1,former adventurer,,lawful
+"<b>Freedom</b>. No one tells me what to do or where to go. Apart from the captain. (Chaotic)",1,freebooter,,chaotic
+"<b>Greed</b>. I’m only in it for the booty. I’ll gladly stab anyone stupid enough to stand in my way. (Evil)",1,freebooter,,evil
+"<b>Comradery</b>. My former shipmates are my family. I’ll do anything for them. (Neutral)",1,freebooter,,neutral
+"<b>Greater Good</b>. No man has the right to enslave another, or to profit from slavery. (Good)",1,freebooter,,good
+"<b>Code</b>. I may be on dry land now, but I still stick to the Freebooter’s Code. (Lawful)",1,freebooter,,lawful
+"<b>Aspiration</b>. One day I’ll return to the sea as the captain of my own ship.",1,freebooter
+"<b>Dedication</b>. Your willingness to get the job done, no matter what the cost, is what is most important. (Evil)",1,gamekeeper,,evil
+"<b>Training</b>. You sink to the level of your training more often than you rise to the occasion.",1,gamekeeper
+"<b>Prestige</b>. Pride in your training, your work, and your results is what is best in life.",1,gamekeeper
+"<b>Diligent</b>. Hard work and attention to detail bring success more often than failure. (Good)",1,gamekeeper,,good
+"<b>Nature</b>. The glory and majesty of the wild world outshine anything mortals create. (Chaotic)",1,gamekeeper,,chaotic
+"<b>Responsibility</b>. When you take an oath to protect and shepherd something, that oath is for life. (Lawful)",1,gamekeeper,,lawful
+"Life is fleeting and death is ever looming; hypervigilance and self-preservation must always be kept to the fore. (Neutral)",1,gravedigger,,neutral
+"My studies of past lives and dynasties have taught me patience and the wisdom of both forethought and reflection. (Lawful)",1,gravedigger,,lawful
+"The mighty fall, most often to the same failings, as do the weak. Feast now at the table of life, taking any and all measures to forestall the meals’ ending. (Evil)",1,gravedigger,,evil
+"The dead should at the very least be respected and their legacies remembered as lessons for both the greater good and self-betterment. (Good)",1,gravedigger,,good
+"The roll of a cosmic die, a bolt of azure lightning, a well-placed banana peel—it doesn’t really matter how or why life ends, now does it? Life can always end in an instant, so do what you must and let that be the whole of the law. (Chaotic)",1,gravedigger,,chaotic
+"My future is destined to be one of success, if not greatness. Until then, I do what I must do. And if called upon, I dig the graves.",1,gravedigger
+"<b>Abundance</b>. I have the power to abolish hunger. (Good)",1,green thumb,,good
+"<b>Creation</b>. If I can grow something, I can sustain myself.",1,green thumb
+"<b>Experimentation</b>. I created the tastiest product when I crossed two seemingly incompatible vegetables. (Chaotic)",1,green thumb,,chaotic
+"<b>Precision</b>. Every plant has a specific set of needs that must be met for it to flourish. I must be precise in my selection of soil, light, and moisture conditions. (Lawful)",1,green thumb,,lawful
+"<b>Profit</b>. If I can create the most beautiful variety of rose and sell it for an exorbitant price, that works for me. It doesn’t matter that it only blooms for a day and then dies because I’ll be long gone after the sale. (Evil)",1,green thumb,,evil
+"<b>Symbiosis</b>. When the sun, soil, and water conditions are right, plants flourish. When plants flourish, the animal kingdom does too, and so do I. (Neutral)",1,green thumb,,neutral
+"<b>Protection</b>. Nature is no longer able to defend itself and we must step in to keep it safe.",1,grovetender
+"<b>Growth</b>. For too long the trees have been felled and silenced, it is time for an age of growth.",1,grovetender
+"<b>Unity</b>. The lone tree has no grove its own.",1,grovetender
+"<b>Sacrifice</b>. Sometimes the trees must be watered with the blood of those who would fell them.",1,grovetender
+"<b>Peace</b>. The engines of war require great amounts of wood to flourish.",1,grovetender
+"<b>Safety</b>. To be secure in our own groves.",1,grovetender
+"<b>Tommy</b>. My dark side faded away when I gave up my past life. (Good)",1,heel,,good
+"<b>Darhk</b>. Do not underestimate the power of the dark arts! (Evil)",1,heel,,evil
+"<b>Ko-zu</b>. Evil and good are always at war within me, true power comes from the balance of both. (Neutral)",1,heel,,neutral
+"<b>Zena</b>. I have a past filled with bloodshed and misery. I must atone for it.",1,heel
+"<b>Wade</b>. Everyone balked when I killed people before; now that I’m a hero, they cheer! (Chaotic)",1,heel,,chaotic
+"<b>Trustworthy</b>. If I tell you something, I mean it, and I will follow through to the best of my ability.",1,high plains drifter
+"<b>Adventure</b>. Life is the ultimate adventure. I can’t wait to see what is over the next hill.",1,high plains drifter
+"<b>Compassion</b>. How we treat the least of us is a statement about our worth as a person.",1,high plains drifter
+"<b>Growth</b>. Being alive means changing based on our experiences.",1,high plains drifter
+"<b>Pleasure</b>. There is no point to living if you cannot experience the pleasures life offers.",1,high plains drifter
+"<b>Loyalty</b>. If I call you friend, I will be by your side until one of us has fallen.",1,high plains drifter
+"<b>Authority</b>. I don’t trust your authority, but I’ll accept it so long as you’re honorable. Cross me and you’re no better than a beggar.",1,hillfolk
+"<b>Determination</b>. You might die trying, but you didn’t lose if you never gave up.",1,hillfolk
+"<b>Love</b>. Unlock my heart and I shall put you above all others in this life.",1,hillfolk
+"<b>Reputation</b>. Why should I care what others think of me so long as I live as I wish?",1,hillfolk
+"<b>Clan</b>. The clan are my people. I might have left them, but I shall always honor them, and I’ll return to them and fight for them should the day come that I’m needed.",1,hillfolk
+"<b>Friendship</b>. I have little use for most people, but if you prove to me your worthy, I’ll fight and die by your side.",1,hillfolk
+"<b>Challenge</b>. The randomness of the hunt keeps it interesting.(Chaotic)",1,huntress,,chaotic
+"<b>Nature</b>. I am doing my part in the cycle of life. (Neutral)",1,huntress,,neutral
+"<b>Honor</b>. Being a successful hunter is a badge of pride and distinction. (Lawful)",1,huntress,,lawful
+"<b>Mastery</b>. I am the deadliest predator in the wilds. (Evil)",1,huntress,,evil
+"<b>People</b>. I am committed to my family and clan, not an ideal. (Neutral)",1,huntress,,neutral
+"<b>Aspiration</b>. Legends of my hunting skills will reach distant lands and future generations.",1,huntress
+"<b>Revenge</b>. I seek to cruelly punish those who have wronged me.",1,imperial conscript
+"<b>Duty</b>. Though the name of the Imperial Army is tarnished I strive to uphold our ancient values.",1,imperial conscript
+"<b>Glory</b>. I wish to see the restoration of the Empire and the warring kingdoms united.",1,imperial conscript
+"<b>Honor</b>. I seek to find a worthy cause to fight for.",1,imperial conscript
+"<b>Protector</b>. No matter where I am, I strive to help those in need.",1,imperial conscript
+"<b>Consumed by loss</b>. I wander the lands a broken warrior, fighting, stealing, and killing as I need.",1,imperial conscript
+"<b>Service</b>. If we serve others, they will serve us in turn. (Lawful)",1,innkeeper,,lawful
+"<b>Perspective</b>. People will tell you a great deal about themselves, their situations, and their desires, if you listen.",1,innkeeper
+"<b>Determination</b>. Giving up is not in my nature.",1,innkeeper
+"<b>Charity</b>. I try to have extra coins to buy a meal for someone in need. (Good)",1,innkeeper,,good
+"<b>Curiosity</b>. Staying safe never allows you to see the wonders of the world. (Chaotic)",1,innkeeper,,chaotic
+"<b>Selfish</b>. We must make sure we bargain for what our skills are worth; people don’t value what you give away for free. (Evil)",1,innkeeper,,evil
+"<b>Powers</b>. I will use my vast intellect to rule the world! (Evil)",1,mad scientist,,evil
+"<b>Light</b>. I will make the world a better place, no matter how many times it is ruined by evil. (Good)",1,mad scientist,,good
+"<b>Strange</b>. Magic is the only true constant. I will become the greatest magician in the omni-verse.",1,mad scientist
+"<b>Manhattan</b>. We’re all puppets, I’m just one that can see the strings. (Neutral)",1,mad scientist,,neutral
+"<b>Doom</b>. I do not wish for godhood, for the gods are beneath me. (Lawful)",1,mad scientist,,lawful
+"<b>Seuss</b>. What better way to learn about the world than by breaking all the rules? (Chaotic)",1,mad scientist,,chaotic
+"<b>Enforcer</b>. I enforce the laws of those who pay me, regardless if I agree upon them or not. (Lawful)",1,mercenary,,lawful
+"<b>Lust</b>. I love the feel of three things.gold, flesh, and steel. The more you combine the three, the better. (Chaotic)",1,mercenary,,chaotic
+"<b>Protection</b>. I selflessly protect those that cannot protect themselves. (Good)",1,mercenary,,good
+"<b>Reaper</b>. Everyone must die sometime, and I want to be the one that does it. (Evil)",1,mercenary,,evil
+"<b>Aspiration</b>. I want to be the very best, like no one ever was.",1,mercenary
+"<b>Untouchable</b>. I. Am. Immortal. (Chaotic)",1,mercenary,,chaotic
+"<b>Glory</b>. Only by fighting for the right causes can I achieve true fame and honor. (Good)",1,mercenary company scion,,good
+"<b>Dependable</b>. Once my oath is given, it cannot be broken. (Lawful)",1,mercenary company scion,,lawful
+"<b>Seeker</b>. Life can be short, so I will live it to the fullest before I die. (Chaotic)",1,mercenary company scion,,chaotic
+"<b>Ruthless</b>. Only the strong survive. (Evil)",1,mercenary company scion,,evil
+"<b>Mercenary</b>. If you have gold, I’m your blade. (Neutral)",1,mercenary company scion,,neutral
+"<b>Challenge</b>. Life is a test, and only by meeting life head on can I prove I am worthy.",1,mercenary company scion
+"<b>Respect</b>. To be treated with honor and trust, I must honor and trust people first. (Good)",1,mercenary recruit,,good
+"<b>Discipline</b>. A good soldier obeys orders. (Lawful)",1,mercenary recruit,,lawful
+"<b>Courage</b>. Sometimes doing the right thing means breaking the law. (Chaotic)",1,mercenary recruit,,chaotic
+"<b>Excitement</b>. I live for the thrill of battle, the rush of the duel, and the glory of victory. (Neutral)",1,mercenary recruit,,neutral
+"<b>Power</b>. When I achieve fame and power, no one will give me orders anymore! (Evil)",1,mercenary recruit,,evil
+"<b>Ambition</b>. I will make something of myself no matter what.",1,mercenary recruit
+"<b>Beastly</b>. To understand the monster, I must act like the monster. (Chaotic)",1,monsterologist,,chaotic
+"<b>Master</b>. To train them is my cause.",1,monsterologist
+"<b>Circle of Life</b>. There is order to everything, even monsters. We only need to understand the patterns. (Lawful)",1,monsterologist,,lawful
+"<b>Godsend</b>. I need to know as much as I can about this monster to stem the rampant death they cause. (Good)",1,monsterologist,,good
+"<b>Monstrosity</b>. Once I understand everything about these beasts, it should be a simple matter to improve upon their design and bend them to my will. (Evil)",1,monsterologist,,evil
+"<b>Publisher</b>. Information is the only true form of currency and power.",1,monsterologist
+"<b>Wild</b>. After seeing the wider world, I want to be the monster that strikes fear in the hearts of people. (Evil)",1,monstrous adoptee,,evil
+"<b>Insight</b>. I want to understand the world of my adopted parents. (Neutral)",1,monstrous adoptee,,neutral
+"<b>Revenge</b>. I want revenge for my lost childhood. Monsters must die!",1,monstrous adoptee
+"<b>Harmony</b>. With my unique perspective and upbringing, I hope to bring understanding between the different creatures of the world. (Good)",1,monstrous adoptee,,good
+"<b>Freedom</b>. My past away from law-abiding society has shown me the ridiculousness of those laws. (Chaotic)",1,monstrous adoptee,,chaotic
+"<b>Redemption</b>. I will rise above the cruelty of my adopted parent and embrace the wider world. (Lawful)",1,monstrous adoptee,,lawful
+"<b>Redemption</b>. Whatever I did in the past, I’m determined to make the world a better place. (Good)",1,mysterious origins,,good
+"<b>Independence</b>. I’m beholden to no one, so I can do whatever I want. (Chaotic)",1,mysterious origins,,chaotic
+"<b>Cunning</b>. Since I have no past, no one can use it to thwart my rise to power. (Evil)",1,mysterious origins,,evil
+"<b>Community</b>. I believe in a just society that takes care of people in need. (Lawful)",1,mysterious origins,,lawful
+"<b>Fairness</b>. I judge others by who they are now, not by what they’ve done in the past. (Neutral)",1,mysterious origins,,neutral
+"<b>Friendship</b>. The people in my life now are more important than any ideal.",1,mysterious origins
+"<b>Adaptation</b>. Nothing lasts, so I make the most of every opportunity. (Chaotic)",1,mythos survivor,,chaotic
+"<b>Nature</b>. Natural, wholesome life must be protected at all costs from unnatural forces. (Neutral)",1,mythos survivor,,neutral
+"<b>Kindness</b>. In a cruel, uncaring universe, I work to make every bit of happiness I can. (Good)",1,mythos survivor,,good
+"<b>Unity</b>. If we don’t do our part, we will all fall into ruin. (Lawful)",1,mythos survivor,,lawful
+"<b>Safety</b>. Without stability, we have nothing. (Lawful)",1,mythos survivor,,lawful
+"<b>Strength</b>. Only the strong survive, and I am the strongest there is. (Evil)",1,mythos survivor,,evil
+"<b>Valor</b>. Stories and songs should inspire others—and me—to perform great deeds that benefit us all. (Good)",1,northern minstrel,,good
+"<b>Greed</b>. There is little point in taking action if it leads to living in squalor. I will take what I want and dare any who disagree to oppose me. (Evil)",1,northern minstrel,,evil
+"<b>Perfection</b>. I will not let the threat of failure deter me. Every deed I attempt, even those I do not succeed at, serve to improve me and prepare me for future endeavors. (Lawful)",1,northern minstrel,,lawful
+"<b>Anarchy</b>. If Ragnarok is coming to end all that is, I must do what I want and damn the consequences. (Chaotic)",1,northern minstrel,,chaotic
+"<b>Knowledge</b>. The north is full of ancient ruins and monuments. If I can glean their meaning, I may understand fate as well as the gods.",1,northern minstrel
+"<b>Pleasure</b>. I will eat the richest food, sleep in the softest bed, enjoy the finest company, and allow no one to stand in the way of my delight and contentment.",1,northern minstrel
+"<b>Domination</b>. With the power I will unearth, I will take my revenge on those who wronged me. (Evil)",1,occultist,,evil
+"<b>Mettle</b>. Each nugget of hidden knowledge I uncover proves my worth.",1,occultist
+"<b>Lore</b>. Knowledge is never good or evil; it is simply knowledge. (Neutral)",1,occultist,,neutral
+"<b>Redemption</b>. This dark knowledge can be made good if it is used properly. (Good)",1,occultist,,good
+"<b>Truth</b>. Nothing should be hidden. Truth is all that matters, no matter who it hurts. (Chaotic)",1,occultist,,chaotic
+"<b>Responsibility</b>. Only by bringing dark lore into the light can we eliminate its threat. (Lawful)",1,occultist,,lawful
+"<b>Authority</b>. Prove to me you are worthy leading and I will follow you through Hell.",1,outrider
+"<b>Struggle</b>. To live is to struggle. To give up is to die.",1,outrider
+"<b>Fairness</b>. Life is not fair, but I choose to be as fair as I am able.",1,outrider
+"<b>Humor</b>. Without humor, life would not be worth living.",1,outrider
+"<b>Reputation</b>. Reputation has little meaning when your main concern is survival.",1,outrider
+"<b>Trustworthiness</b>. Trust is the bond that makes us whole. Break my trust at your peril.",1,outrider
+"<b>Love</b>. Love is pure, and I seek to spread it.",1,palace musician
+"<b>Knowledge</b>. I seek to learn the words and chords to every song.",1,palace musician
+"<b>Infamy</b>. The greatest stories have tragic ends but sometimes they need to be helped along.",1,palace musician
+"<b>Riches</b>. Food and lodging is well and good, but who’s willing to pay the most coin?",1,palace musician
+"<b>Fame</b>. Wealth is great, but what’s the point if no one knows your name?",1,palace musician
+"<b>Loss</b>. While loss is painful, I draw great inspiration from it.",1,palace musician
+"<b>Responsibility</b>. It is my duty to share my exceptional gifts and knowledge for the betterment of all. (Good)",1,parfumier,,good
+"<b>Pragmatism</b>. I never let passion, preference, or emotion influence my decision-making or clear headedness. (Lawful)",1,parfumier,,lawful
+"<b>Freedom</b>. Rules, particularly those imposed by others, were meant to be broken. (Chaotic)",1,parfumier,,chaotic
+"<b>Deep Science</b>. I live a life based on facts, logic, probability, and common sense. (Lawful)",1,parfumier,,lawful
+"<b>Notoriety</b>. I will do whatever it takes to become the elite that I was witness to during my time among the boutiques, salons, and workshops of the noble’s district.",1,parfumier
+"<b>Profit</b>. I will utilize my talents to harvest, synthesize, concoct, and brew almost anything for almost anyone. As long as the profit margin is right. (Evil)",1,parfumier,,evil
+"<b>Influence</b>. To hold sway over others is one of the great joys of life.",1,patrician
+"<b>Politics</b>. True influence lies in politics, one must master the halls of power.",1,patrician
+"<b>Excess</b>. To indulge in pleasure is the meaning of life.",1,patrician
+"<b>Wealth</b>. Politics and power involve a lot of danger, better to be rich and obscure.",1,patrician
+"<b>Peace</b>. Conflict only brings ruin with it. Peace is the path to stability.",1,patrician
+"<b>Chaos</b>. Chaos is a ladder.",1,patrician
+"I want to experience everything. (Chaotic)",1,planar nomad,,chaotic
+"The secrets of the gods are out there—if we can just find the right place to look. (Neutral)",1,planar nomad,,neutral
+"A group is not defined by its physical space, but its shared bonds. (Good)",1,planar nomad,,good
+"No one can tell me where to be or what to do. (Chaotic)",1,planar nomad,,chaotic
+"The treasures of the multiverse are mine for the taking. (Evil)",1,planar nomad,,evil
+"There is a divine plan in the shape of the planes if I can just find it. (Lawful)",1,planar nomad,,lawful
+"<b>Lethargy</b>. I am so utterly bored. (Neutral)",1,player,,neutral
+"<b>Respect</b>. I am afraid of getting banned and treat any authority with the utmost respect. (Lawful)",1,player,,lawful
+"<b>Meh</b>. Nothing is real, nothing matters, nobody matters. Do whatever you want. (Chaotic)",1,player,,chaotic
+"<b>Blue Dialog</b>. I want to do the most good possible to increase my hero score. (Good)",1,player,,good
+"<b>Two-Face</b>. I have lived long enough to become the enemy. (Evil)",1,player,,evil
+"<b>Unique</b>. I have not yet found another like myself. Maybe if I can find one, we can understand more about what happened.",1,player
+"<b>Performance</b>. Putting on a good show that people enjoy is worth its weight in gold.",1,playwright
+"<b>Freedom</b>. The authorities should not dictate what is proper content for a play!",1,playwright
+"<b>Teamwork</b>. A writer without a troupe is nothing but a dreamer.",1,playwright
+"<b>Sacrifice</b>. A good performance takes sweat and sometimes blood.",1,playwright
+"<b>Peace</b>. Safe venues are rare in times of war.",1,playwright
+"<b>War</b>. Conflict inspires the greatest stories.",1,playwright
+"<b>Competitiveness</b>. I like being able to do things others can’t. (Chaotic)",1,porter,,chaotic
+"<b>Determination</b>. I will not give up. Others are depending upon me. (Good)",1,porter,,good
+"<b>Fitness</b>. My body is my livelihood.",1,porter
+"<b>Karma</b>. I curse every ungrateful snob that treats me poorly. Someday they’ll have to resort to manual labor, and I want to see them grovel. (Evil)",1,porter,,evil
+"<b>Preparation</b>. Planning is key. I can carry a well-packed load anywhere. (Lawful)",1,porter,,lawful
+"<b>Service</b>. My duty is to assist others. (Neutral)",1,porter,,neutral
+"<b>Busy</b>. I have standards to uphold and no time for those who can’t meet them. (Lawful)",1,prodigy,,lawful
+"<b>Perfectionist</b>. If you want something done right, do it yourself. (Neutral)",1,prodigy,,neutral
+"<b>Slob</b>. My best performance happens while under the influence of any number of intoxicants. (Chaotic)",1,prodigy,,chaotic
+"<b>Motivator</b>. I want to inspire people to be their best possible selves. (Good)",1,prodigy,,good
+"<b>Suffering</b>. My work will be remembered for generations to come, regardless of the strain it puts on me.",1,prodigy
+"<b>Stark</b>. I don’t care what those suckers like. I’m in this for the fame and fortune and I will say whatever I have to say in order to get it. (Evil)",1,prodigy,,evil
+"<b>Community</b>. The service I provide is an integral part of any functioning community. (Lawful)",1,professional,,lawful
+"<b>Proactive</b>. Practicing my profession is the best way I know to do something positive in the world. (Good)",1,professional,,good
+"<b>Order</b>. Whether I help people find justice, understand truth, recover their health, collect their dues, enlighten themselves, or run their business, the work I do reduces chaos in the world. (Lawful)",1,professional
+"<b>Greed</b>. I picked this profession for the status and money. (Evil)",1,professional,,evil
+"<b>People</b>. I got into this line of work to help the people I care about, not for an ideal. (Neutral)",1,professional,,neutral
+"<b>Aspiration</b>. I work day and night to master my profession and make a name for myself.",1,professional
+"<b>Authenticity</b>. I would like to be authentic, but people wouldn’t accept me.",1,raider
+"<b>Boldness</b>. Be bold in everything you do.",1,raider
+"<b>Community</b>. I can fit in and help the community, but I can never truly be a part of it.",1,raider
+"<b>Determination</b>. I can’t change my past, but I’m determined to do better in the future.",1,raider
+"<b>Justice</b>. Before I pass judgment on others, I’ll apply the same standards to myself.",1,raider
+"<b>Self-Respect</b>. Once I have atoned, I will have the self-respect I desire.",1,raider
+"<b>Self-Improvement</b>. Awareness of my past lives allows me to integrate their lessons into this life. (Good)",1,reawakened,,good
+"<b>Destiny</b>. I have been reawakened for a purpose that I must fulfill in this life. (Lawful)",1,reawakened,,lawful
+"Live and Let Live. My larger perspective lets me understand that all things in life are temporary. (Neutral)",1,reawakened,,neutral
+"<b>Freedom</b>. I must be free to explore all that life has to offer, and everyone should have that opportunity. (Chaotic)",1,reawakened,,chaotic
+"<b>Retribution</b>. This life is an opportunity to finally achieve the vengeance I was denied. (Evil)",1,reawakened,,evil
+"<b>Knowledge</b>. I shall learn as much as I can in this life, hoping that it will be passed on in my lives to come.",1,reawakened
+"<b>Godly</b>. My moral code comes from a higher power. Their laws are above your own. (Lawful)",1,rebel,,lawful
+"<b>Ledger</b>. Let it all burn. (Chaotic)",1,rebel,,chaotic
+"Without a Cause. I don’t need to have a good reason for anything that I do. (Neutral)",1,rebel,,neutral
+"<b>Dangerous</b>. I don’t care how many people die. If we want to disrupt the system, then bloodshed is required. (Evil)",1,rebel,,evil
+"<b>Individual</b>. I am going to pave my own path in this world, even if it kills me.",1,rebel
+"<b>Saint</b>. True rebellion is in the love we show others. We can’t expect anyone else to be the change we want to see. (Good)",1,rebel,,good
+"<b>Tradition</b>. It is important to keep and practice the traditions of my homeland. (Lawful)",1,refugee,,lawful
+"<b>Freedom</b>. In this new life, in this new land, I will live as I wish. (Chaotic)",1,refugee,,chaotic
+"<b>Charity</b>. It is our responsibility to help others in need. (Good)",1,refugee,,good
+"<b>Realism</b>. There is no use in pretending things are any different than how they are. (Neutral)",1,refugee,,neutral
+"<b>People</b>. Nothing is more important than looking after the people in your life. (Good)",1,refugee,,good
+"<b>Aspiration</b>. I will make a better life for myself and will not waste this new opportunity in any way.",1,refugee
+"<b>Community</b>. My responsibility to protect the community is second only to protecting my daimyo.",1,samurai
+"<b>Balance</b>. The universe strives for balance… yin and yang. It is not my job to determine what balance is, but it is my job to protect it.",1,samurai
+"<b>Boldness</b>. I act deliberately and decisively.",1,samurai
+"<b>Fairness</b>. Being fair with others is one of the ways I protect my image and that of my daimyo.",1,samurai
+"<b>Honor</b>. My honor is my life.",1,samurai
+"<b>Kindness</b>. I choose when and how to be kind, for it is not a requirement of my code, but it is one of the ways in which I am judged.",1,samurai
+"<b>Freedom</b>. Ropes and chains are made to be broken. Locks are made to be picked. Doors are meant to be opened. (Chaotic)",1,scoundrel,,chaotic
+"<b>Community</b>. We need to look out for one another and keep everyone safe. (Lawful)",1,scoundrel,,lawful
+"<b>Charity</b>. I share my wealth with those who need it the most. (Good)",1,scoundrel,,good
+"<b>Friendship</b>. My friends matter more to me than lofty ideals. (Neutral)",1,scoundrel,,neutral
+"<b>Aspiration</b>. One day my wondrous deeds will be known across the world.",1,scoundrel
+"<b>Greed</b>. I’ll stop at nothing to get what I want. (Evil)",1,scoundrel,,evil
+"<b>Authority</b>. I never question one to whom I have pledged my allegiance.",1,sea reaver
+"<b>Challenge</b>. All life is a challenge. It is how you rise to it that defines you.",1,sea reaver
+"<b>Fairness</b>. It would be damning if everyone fairly deserves what they get in this world.",1,sea reaver
+"<b>Humor</b>. One must maintain a sense of humor or be overwhelmed with grief.",1,sea reaver
+"<b>Reputation</b>. My reputation precedes me… I hope.",1,sea reaver
+"<b>Trustworthiness</b>. If I give you my word, I intend to keep it.",1,sea reaver
+"<b>Power</b>. The sea can grant you many things if you know how to use it.",1,sea serpent
+"<b>Revenge</b>. Those who betray their comrades can never be forgiven.",1,sea serpent
+"<b>Reliability</b>. A crew must be able to rely on one another.",1,sea serpent
+"<b>Skill</b>. Being the best requires both talent and practice.",1,sea serpent
+"<b>Glory</b>. Nothing is more noble than victorious combat.",1,sea serpent
+"<b>Plunder</b>. The greatest bounty requires the most risk.",1,sea serpent
+"<b>Freedom</b>. Information can empower the weakest of us.",1,secret-broker
+"<b>Caution</b>. You can never be too careful. Knowing secrets make you a target.",1,secret-broker
+"<b>Control</b>. Knowledge is power. With it, you can drive the best folk to the worst deeds.",1,secret-broker
+"<b>Honesty</b>. When no one has anything to hide, it shows us who they really are.",1,secret-broker
+"<b>Greed</b>. Everything has its price.",1,secret-broker
+"<b>Curiosity</b>. Nothing great ever came of accepting everything you see",1,secret-broker
+"<b>Faith</b>. I trust that the judgment of the gods is fair. So long as I obey their will, I shall be rewarded.",1,sem priest
+"<b>Duty</b>. The service I provide is not just important, it is necessary. I shall not shirk my responsibilities.",1,sem priest
+"<b>Knowledge</b>. Pursuit of the hidden secrets of the world drives me to study scrolls and texts with ravenous interest.",1,sem priest
+"<b>Diligence</b>. I understand that the nature of my profession demands a keen attention to detail. I make no mistakes.",1,sem priest
+"<b>Altruism</b>. My services extend to the living as well as the dead. I practice medicine to keep the sick and wounded off of my embalming table.",1,sem priest
+"<b>Stoicism</b>. My time spent with the dead has shown me that vibrant emotions remain a luxury of the living.",1,sem priest
+"<b>Greed</b>. Threats to my companions only increase my glory when I protect them from it. (Evil)",1,sentry,,evil
+"<b>Perception</b>. I watch everyone, for threats come from every rank or station. (Neutral)",1,sentry,,neutral
+"<b>Duty</b>. The laws of the community must be followed to keep everyone safe. (Lawful)",1,sentry,,lawful
+"<b>Community</b>. I am all that stands between my companions and certain doom. (Good)",1,sentry,,good
+"<b>Determination</b>. To truly protect others, you must sometimes break the law. (Chaotic)",1,sentry,,chaotic
+"<b>Practicality</b>. I require payment for the protection or service I provide.",1,sentry
+"<b>Beauty</b>. My time in darkness has honed my appreciation for every kind, beautiful thing the world has to offer. (Good)",1,shadow-scarred,,good
+"<b>Responsibility</b>. I have a duty to use my experience with Shadow to root out its influence. (Lawful)",1,shadow-scarred,,lawful
+"<b>Independence</b>. My experiences have taught me we can rely on nothing but ourselves. (Chaotic)",1,shadow-scarred,,chaotic
+"<b>Power</b>. I will become so powerful that the forces of Shadow can never hurt me again.",1,shadow-scarred
+"<b>Knowledge</b>. Having experienced the truth of things, I cannot go back, only deeper, to understand. (Neutral)",1,shadow-scarred,,neutral
+"<b>Retribution</b>. Shadow has forged in me an implacable foe for all time.",1,shadow-scarred
+"<b>Revenge</b>. Those who enslaved me will taste my own brand of justice. (Chaotic)",1,slave,,chaotic
+"<b>Freedom</b>. All beings should be free, and I will fight to preserve that right for myself and others. (Good)",1,slave,,good
+"<b>Service</b>. Each of us must do our part. Whether free or slave, we must serve a greater purpose than ourselves. (Lawful)",1,slave,,lawful
+"<b>Destruction</b>. I will destroy any oppressor, no matter their purpose. (Evil)",1,slave,,evil
+"<b>Life</b>. I am free to live as I see fit. (Neutral)",1,slave,,neutral
+"<b>Destiny</b>. I am free to fulfill whatever destiny I choose.",1,slave
+"<b>Self</b>. It’s nothing personal, truly. Just don’t ever get between me and anything I need. (Neutral)",1,smuggler,,neutral
+"<b>Benevolence</b>. Sometimes, bending a few rules and breaking a few laws is necessary to help those in need. (Good)",1,smuggler,,good
+"<b>Efficiency</b>. Proactive thinking and organization, inventory control, balanced books and timetables—these are the tools of a successful life. (Lawful)",1,smuggler,,lawful
+"Cupidity“Greed is right, greed works, greed clarifies.…” (Evil)",1,smuggler,,evil
+"<b>Easy-Rider</b>. My lifestyle will never be dictated by the borders, rules, or the laws of others. (Chaotic)",1,smuggler,,chaotic
+"<b>Aspiration</b>. Someday I will be a ship or caravan master and blaze my own trails and trade routes to wealth and adventures as yet unheard of.",1,smuggler
+"<b>Authority</b>. Authority is the key to discipline, and discipline is the key to success. Together, we are victorious!",1,soldier
+"<b>Autonomy</b>. I follow the orders given to me, but I enjoy working on my own and taking charge.",1,soldier
+"<b>Citizenship</b>. It is vital for all citizens to support our armies. We are the best in the world, and we will never be conquered.",1,soldier
+"<b>Determination</b>. Sometimes the only thing standing between you and the grave is the determination to win.",1,soldier
+"<b>Love</b>. You must love your fellow man just as you love your wife or your children. We are all brothers and sisters.",1,soldier
+"<b>Reputation</b>. You cannot control who you were born to, but the one thing you truly earn in this life is your reputation. It should be protected from foolish actions, and from frauds who would destroy it for their own benefit.",1,soldier
+"<b>Power</b>. Some say knowledge is power; I saw knowledge lets me know that power is power. I seek to concentrate as much in my hands as I can.",1,sovereign scholar
+"<b>Freedom</b>. For too long the small people of the world have been trampled by those above. I seek to free those who toil below.",1,sovereign scholar
+"<b>Unity</b>. Only together can we stand, both as individuals and nations.",1,sovereign scholar
+"<b>Sacrifice</b>. Some causes are worth dying for. I would give my life for what I believe.",1,sovereign scholar
+"<b>Peace</b>. Conflict only brings ruin with it. Peace is the path to stability.",1,sovereign scholar
+"<b>War</b>. History is quite clear, the only way to reunite the Empire is through the blood and sweat of conflict.",1,sovereign scholar
+"<b>Aspiration</b>. I know that I was sent here for a reason.",1,time-lost traveler
+"<b>Determination</b>. I must find a way to return to my time. (Neutral)",1,time-lost traveler,,neutral
+"<b>Protection</b>. I have seen the horrors of history, and I will ensure they never happen again. (Good)",1,time-lost traveler,,good
+"<b>Greed</b>. I know where the treasures were buried. Finders keepers. (Evil)",1,time-lost traveler,,evil
+"<b>Freedom</b>. I am no longer bound by the moral constraints of my original time. (Chaotic)",1,time-lost traveler,,chaotic
+"<b>Necessity</b>. I know that time must not be tampered with. (Lawful)",1,time-lost traveler,,lawful
+"<b>Accuracy</b>. If I misinterpret a person’s words, I could start a war. (Lawful)",1,translator,,lawful
+"<b>Community</b>. I am proud to bring two groups of people together in understanding. (Good)",1,translator,,good
+"<b>Manipulation</b>. Who’s going to know if I color a person’s words somewhat to encourage a favorable outcome for myself? (Chaotic)",1,translator,,chaotic
+"<b>Neutrality</b>. My emotions have no place in a translation situation. I am simply the vehicle of delivery, I do not need to agree with the message. (Neutral)",1,translator,,neutral
+"<b>Power</b>. I can interpret any way I please. Who’s going to know I’m lying? (Evil)",1,translator,,evil
+"<b>Value</b>. If I do a good job, I’ll be offered more work. More work means coin in my pocket and food in my belly.",1,translator
+"<b>Power</b>. Words are power, use them wisely.",1,tribune of the plebs
+"<b>Freedom</b>. We must all be free to speak our minds.",1,tribune of the plebs
+"<b>Unity</b>. Even one voice can unify people behind a cause with the right words.",1,tribune of the plebs
+"<b>Conflict</b>. The best stories are inevitably drawn from the horrors of war.",1,tribune of the plebs
+"<b>Order</b>. Use your voice to bring calmness and stability.",1,tribune of the plebs
+"<b>Pride</b>. Be proud of what you do and who you are.",1,tribune of the plebs
+"<b>Ambition</b>. It is my divine calling to become better than my rivals by any means necessary. (Chaotic)",1,trophy hunter,,chaotic
+"<b>Altruism</b>. I hunt only to protect those who cannot protect themselves. (Good)",1,trophy hunter,,good
+"<b>Determination</b>. No matter what the laws say, I will kill that beast! (Chaotic)",1,trophy hunter,,chaotic
+"<b>Cruelty</b>. My prey lives only for my pleasure. It will die exactly as quickly or as slowly as I desire. (Evil)",1,trophy hunter,,evil
+"<b>Sport</b>. We’re just here to have fun. (Neutral)",1,trophy hunter,,neutral
+"<b>Family</b>. I follow in my family’s footsteps. I will not tarnish their legacy.",1,trophy hunter
+"<b>Fairness</b>. Favor should be earned through blood and sweat, not nepotism and preferential treatment.",1,tyrant’s lieutenant
+"<b>Loyalty</b>. Give your life for our leader, and be eternally rewarded!",1,tyrant’s lieutenant
+"<b>Power</b>. Those who earned power have the right to use it as they see fit.",1,tyrant’s lieutenant
+"<b>Redemption</b>. It’s never too late to start to make the world a little less awful.",1,tyrant’s lieutenant
+"<b>Force</b>. Fear is the universal motivator.",1,tyrant’s lieutenant
+"<b>Unity</b>. A disciplined army can defeat a force ten times its size.",1,tyrant’s lieutenant
+"<b>Authenticity</b>. What you see of me is what I am. When I say something, I mean it. When I say I’m going to kill you, it isn’t a threat, it’s something you should start planning for.",1,voyager
+"<b>Trustworthy</b>. Put your trust in me and I will never let you down. If I place my trust in you, I expect the same.",1,voyager
+"<b>Boldness</b>. If I want something, I get it. There’s no sense worrying about who might see me doing it.",1,voyager
+"<b>Loyalty</b>. If you have earned my loyalty, I will never forsake you. If I carry your banner, I will go to the grave before I put it in the dirt.",1,voyager
+"<b>Justice</b>. There is nothing more important than righting a wrong.",1,voyager
+"<b>Adventure</b>. Beyond every wave in the sea is a new adventure, and I intend to seek it!",1,voyager
+"<b>Knowledge</b>. I travel to learn. The world is an open book to those who can read it.",1,wanderer
+"<b>Freedom</b>. The despots of the world should not stifle the free travel of individuals.",1,wanderer
+"<b>Exploration</b>. New horizons and experiences are always around the corner.",1,wanderer
+"<b>Culture</b>. The world has too much to offer to be tied to one place.",1,wanderer
+"<b>Joy</b>. Conflict only brings ruin with it. Peace is the path to stability.",1,wanderer
+"<b>Misery</b>. The past is haunted, so it’s best to keep away from it.",1,wanderer

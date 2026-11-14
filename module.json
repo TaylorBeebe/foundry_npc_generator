@@ -1,0 +1,62 @@
+{
+    "id": "npc-generator-dnd5e-eldore",
+    "title": "NPC Generator for DnD5e (Eldore)",
+    "description": "Generate NPCs on the fly wich this dynamic NPC generator. Including names and character sheets, all randomly generated using an explendid algorithm.",
+    "version": "1.28.3",
+    "authors": [
+        {
+            "name": "Mad Wizard",
+            "discord": "mad.wizard"
+        }
+    ],
+    "url": "https://github.com/elizeuangelo/fvtt-module-npc-generator-dnd5e-faq",
+    "bugs": "https://github.com/elizeuangelo/fvtt-module-npc-generator-dnd5e-faq/issues",
+    "readme": "https://raw.githubusercontent.com/elizeuangelo/fvtt-module-npc-generator-dnd5e-faq/master/README.md",
+    "changelog": "https://raw.githubusercontent.com/elizeuangelo/fvtt-module-npc-generator-dnd5e-faq/master/CHANGELOG.md",
+    "esmodules": [
+        "main.js"
+    ],
+    "styles": [
+        "style.css"
+    ],
+    "packs": [
+        {
+            "name": "features",
+            "label": "Features",
+            "path": "packs/features",
+            "type": "Item",
+            "system": "dnd5e",
+            "flags": {},
+            "ownership": {
+                "ASSISTANT": "OWNER"
+            }
+        },
+        {
+            "name": "spells",
+            "label": "Spells",
+            "path": "packs/spells",
+            "type": "Item",
+            "system": "dnd5e",
+            "flags": {},
+            "ownership": {
+                "ASSISTANT": "OWNER"
+            }
+        }
+    ],
+    "compatibility": {
+        "minimum": 13,
+        "verified": 14
+    },
+    "relationships": {
+        "systems": [
+            {
+                "id": "dnd5e",
+                "type": "system",
+                "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
+                "compatibility": {
+                    "verified": "5.3.3"
+                }
+            }
+        ]
+    }
+}

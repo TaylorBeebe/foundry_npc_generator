@@ -1,0 +1,102 @@
+"An acquaintance of mine was supposed to meet me yesterday but never came, I can't find ['him'|'her'] and I'm really worried something might have happened."
+"I lost something very valuable to me some weeks ago. I'm becoming out of options and desperate."
+"I'm suspicious something very valuable to me is hidden somewhere near. The place is dangerous and I'm willing to pay someone to go there."
+"A dangerous ['animal'|'creature'] is killing stock in a nearby ['village'|'town'], I need help dealing with it."
+"A group of [plot.raiders] are raiding the region."
+"Weird assassinations are happening in town and some people say its work of [plot.assassins]."
+"At night, strange lights are seen in the ['forest'|'mountain'], at the beating sounds of drums. The ['hunters'|'scouts'] who went check are now missing, people are afraid."
+"I need something delivered with discretion to someone."
+"I need to go somewhere and I need protection."
+"Rumors say a group of raiders, just resembling some of the players, are creating havoc on the region."
+"I've been ['cursed'|'hexed'] and I need help breaking it."
+"I desperately need help but I know and have some qualms on one of the players."
+"A mysterious illness has struck our village, causing people to fall into a deep sleep. I'm seeking a remedy to wake them up."
+"A mysterious illness is spreading through the village, leaving people weak and bedridden. The local healer is overwhelmed and seeks help in finding a cure or discovering the cause."
+"I've been haunted by recurring nightmares that seem all too real. I need someone to help me uncover the source of these haunting dreams."
+"I've discovered an ancient map that leads to a hidden city filled with untold riches. I'm seeking adventurers to accompany me on this perilous journey."
+"A cult has infiltrated the city, manipulating key figures and inciting unrest among the population."
+"A small village has fallen victim to a cult's insidious indoctrination, with its inhabitants becoming devoted followers."
+"A cult has kidnapped a group of influential figures, intending to sacrifice them in a ritual that would grant the cultists immense power."
+"I suspect ['the king'|'our leader'|'the chief'] got switched to someone else. No one believes me."
+"I suspect ['the king'|'our leader'|'the chief'] is charmed or enchanted, not acting like himself. No one believes me.",1,,drow
+"I suspect ['the queen'|'our leader'] is charmed or enchanted, not acting like herself. No one believes me."
+"['An eclipse'|'The red moon'] is happening soon, on harvest day, and people are afraid of a prophecy involving it."
+"Crypts and tombs are being violated in the cemitery, on most nights in the past few days."
+"Something strange happened and a nearby town got wrecked and destroyed overnight.[''|' No witnesses.']"
+"Commonfolk are disappearing in town. It happens most weeks and people are afraid hiding in their homes at night."
+"It was prophetized someone very close in resemblance of one of the players would come to town and save the cityfolk."
+"I've been having vivid dreams about a hidden treasure buried deep within the ['forest'|'mountain'|'jungle']. I'm willing to split the loot if someone helps me find it."
+"I've uncovered a hidden entrance to an ancient underground labyrinth filled with traps and treasures. I need a group of brave adventurers to accompany me inside."
+"A traveling circus has come to town, but their star performer, a mesmerizing ['illusionist'|'incantrix'|'enchantress'], has gone missing. The circus troupe seeks help in finding their beloved performer before the show begins."
+"A long-standing feud between two neighboring families has escalated, and tensions are high. The townspeople want someone to mediate and find a peaceful resolution before it turns violent."
+"A beloved local landmark, a centuries-old tree, is dying and on the verge of collapsing. The townspeople are saddened and wish to save the tree, so they are looking for someone knowledgeable in arboriculture or nature preservation to help revive it.",1,,evil
+"A pack of wild wolves has been preying on livestock, causing great losses for the shepherds. The villagers need someone skilled in hunting or animal control to protect their flocks."
+"A severe drought has struck the farming community, and the crops are withering away. The farmers seek assistance in finding a new water source or a way to bring rain to save their livelihoods."
+"A valuable artifact has gone missing from the local museum, and the curator suspects it was an inside job. The townspeople need someone to investigate and uncover the truth.",1,commoner
+"A mischievous group of street urchins has been causing havoc in the town, stealing valuables and creating chaos. The townspeople need someone to catch them and put an end to their mischief.",1,commoner
+"A mysterious illness has plagued our village, and traditional healers haven't been able to find a cure. I'm seeking someone with magical abilities to help save my people.",1,,evil
+"I seek assistance in dispelling a malevolent enchantment that plagues my homeland.",1,abjurer
+"A legendary treasure is said to be hidden deep within a treacherous dungeon. I'm assembling a team of brave adventurers to retrieve it.",4,"antiquarian,spellcaster,rich"
+"I'm an archaeologist studying an ancient civilization. I require assistance in deciphering a cryptic language found on recently discovered artifacts.",1,"antiquarian,sovereign scholar"
+"I've come across a book of forbidden knowledge that holds immense power. However, it is protected by deadly traps and guardians. I need a skilled team to help me retrieve it.",1,arcanist
+"A pack of werewolves has been terrorizing the villagers during full moons. I'm in need of skilled hunters to track them down and eliminate the threat.",2,"archer,martial,ranger"
+"As an archer of unparalleled skill, I've been challenged to a legendary marksmanship contest. I need someone to train me to ensure victory.",1,archer
+"I will try assassinating one of the players.",1,assassin
+"I've been hired as an assassin to eliminate a notorious crime lord, but I require a team of specialists to plan and execute the mission.",3,assassin
+"As a bard, I've been tasked with composing an epic ballad about a long-lost artifact. I'm looking for adventurers to help me uncover its secrets.",2,bard
+"Recently, I was invited in the court for playing and I have witnessed troubling things wich I can't disclose.",1,bard
+"My bees are dying and I believe it's due to something going on in the forest.",1,bee keeper
+"A berserker warrior has been consumed by an uncontrollable rage, posing a threat to innocent villagers. I need assistance in subduing them before more harm is done.",1,berserker
+"I seek adventurers to aid in the collection of rare and powerful artifacts that hold the key to unlocking forbidden knowledge.",2,cultist
+"My cult is on the rise, we are indocrinating lots of people, filling most of the high ranks in the city and soon we will be able to fulfill the prophecy.",1,cultist
+"As a druid, I'm deeply connected to nature. However, a corrupted forest threatens to unleash chaos upon the land. I'm assembling a group of nature enthusiasts to restore balance.",2,druid
+"I seek a sparring partner to test my destructive powers.",1,evoker
+"Someone close to me got kidnapped and I need help bringing them back.",1,"family,religious"
+"A powerful sorcerer has cursed our farmland, causing our crops to wither and die. I'm searching for someone with the ability to break this curse and restore prosperity to our village.",1,farmer
+"I don't reckognize my ['husband'|'friend']. I fell like something is pretending to be him. Everyone I talked to thinks I'm insane.",1,"female,family"
+"I am a skilled fighter who desires a worthy opponent to engage in a friendly duel. Only the strongest warriors need apply.",1,fighter
+"I don't reckognize my ['wife'|'friend']. I fell like something is pretending to be her. Everyone I talked to thinks I'm insane.",1,"male,family"
+"A group of bandits has taken over the main trade route, causing distress among the merchants. I'm seeking skilled mercenaries to clear the route and ensure safe passage for goods.",3,"martial,mercenary,mercenary company scion,mercenary recruit",evil
+"I'm searching for a legendary sword that is said to grant its wielder incredible power. I'll reward anyone who can locate it.",1,martial
+"A group of bandits has been terrorizing the countryside, and the local authorities seem unable to stop them. I'm organizing a militia to drive them out.",1,"martial,mercenary,mercenary company scion,mercenary recruit",evil
+"A powerful dragon has been causing havoc in the region, and I'm assembling a team of dragon slayers to put an end to its reign of terror.",1,"martial,rich",evil
+"As a seasoned warrior, I challenge one of the players to a test of strength and skill. Prepare yourself for an intense duel!",1,martial
+"I reside in a remote monastery and I need assistance in protecting my sacred teachings from a ['band of thieves'|'group of cultists'].",1,monk
+"A exotic creature is becoming a menace to a nearby ['village'|'town']. I've known the creature for years and I know something must be wrong.",1,naturalist
+"A powerful artifact has been stolen from my family's estate, and I suspect it's being used for nefarious purposes. I need skilled adventurers to retrieve it.",1,noble
+"As a noble, I'm entangled in a web of political intrigue. I need someone discreet and resourceful to help me navigate this treacherous world.",1,noble
+"I seek companions to embark on a holy quest to vanquish a demonic threat.",2,paladin,,"chaotic,evil"
+"I am on a sacred pilgrimage to a distant shrine but I need protection from the dangers of the road.",1,priest
+"I'm a ['known'|'talented'] blacksmith, but my workshop has been destroyed by a raging fire. I need assistance in rebuilding it.",1,"professional,smuggler"
+"I'm a renowned alchemist who has accidentally turned myself into a small creature. I need assistance in reversing this transformation and returning to my human form.",1,professional
+"I'm a master alchemist seeking rare ingredients for my latest experiment. Find these ingredients, and I'll reward you with potions of great power.",1,"professional,arcanist,cultist"
+"I am tracking a fearsome beast that has been terrorizing the countryside.",1,ranger
+"A powerful artifact has been stolen from our sacred temple, and its absence is causing chaos among our people. I'm offering a handsome reward for its safe return.",1,religious
+"A plague of undead creatures has overrun the cemetery, terrorizing the nearby town. I require assistance in purging this unholy presence.",1,religious
+"I've been plagued by a vengeful spirit that seeks retribution for a past wrongdoing. I'm desperate for someone to help me appease the spirit and find peace.",1,religious
+"A prophecy foretells the rise of an ancient cult that seeks to summon a malevolent entity capable of bringing chaos and destruction to the world.",1,religious
+"The spirits of the deceased have been restless lately, and I believe it's a sign of an impending disaster. I need someone with the ability to commune with spirits to help appease them.",1,"religious,naturalist"
+"A series of bizarre disappearances have occurred in a nearby town, and the townsfolk believe it to be the work of a legendary monster. I'm recruiting a team of brave individuals to investigate and put an end to the terror.",3,"rich,martial,ranger"
+"A ball is happening soon and all the most influential people in the city are being invited.",1,rich
+"I'm inviting the players for a banquet in my home.",1,rich
+"On my studies I discovered some awful things about a noble family ruling the region.",1,scholar
+"At night, strange lights are seen in the sea. Some ships went missing and it's becoming an urban legend.",1,sea
+"As a sorcerer with an affinity for fire magic, I'm investigating a series of mysterious arson attacks. I need someone knowledgeable in the arcane to assist me.",2,sorcerer
+"I'm suspicious an ancient ['magical'|'sacred'] monolith nearby is being used in foul practices.",1,spellcaster
+"I found a strange artifact wich is making me question my sanity.",1,spellcaster
+"I have been cursed with eternal youth and for reasons I am not sharing I am searching for a way to break the curse. I require the help of someone knowledgeable in ancient magic.",1,"supernaturally old,venerable",evil
+"I will challenge one of the players for a duel.",1,swashbuckler
+"I'm a swashbuckler seeking a worthy adversary for a daring duel on the high seas. Show me your swordplay skills!",1,swashbuckler
+"I will steal something from the players.",1,thief
+"I'm a skilled thief planning the ultimate heist. I'm assembling a team of specialists to carry out this audacious crime.",3,thief
+"I'm rallying warriors for an upcoming battle against an ancient evil. Will you join the righteous cause?",2,warcleric
+"A legendary sea monster has been terrorizing the coastal waters, sinking ships and endangering trade routes.",1,sea
+"A mysterious island has appeared on the navigational charts, rumored to be filled with untold treasures and ancient artifacts.",1,sea
+"A valuable cargo shipment has gone missing in a treacherous storm, leaving the merchant's livelihood at stake.",1,sea
+"A ghost ship has been spotted, sailing aimlessly in the moonlit nights.",1,sea
+"A legendary lost city beneath the sea has been whispered among sailors, said to be filled with unimaginable riches.",1,sea
+"A notorious pirate captain is wreaking havoc on the open seas, plundering ships and causing chaos.",1,sea
+"A powerful storm has damaged vital lighthouses along the coast, putting countless ships at risk of wrecking. Sailors are seeking volunteers to help repair and maintain these crucial beacons of safety.",1,"sea,commoner"
+"A rare and valuable sea creature has been spotted deep beneath the waves, sought after for its magical properties. Sailors are forming an expedition to capture the creature alive.",1,sea
+"A fabled treasure map has resurfaced, leading to an island rumored to hold vast riches. I am assembling a crew to follow the map's clues and claim the hidden treasure before rival treasure hunters get their hands on it.",1,sea
+"A powerful storm deity has been angered, causing turbulent weather patterns and wreaking havoc on maritime trade.",1,sea

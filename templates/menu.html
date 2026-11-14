@@ -1,0 +1,295 @@
+{{#with object}}
+<div class="slider-menu">
+    <button class="slider appearance" for="appearance">
+        <i class="fa-duotone fa-person-half-dress"></i>
+        <span>Appearance</span>
+    </button>
+    <button class="slider biography" for="biography">
+        <i class="fas fa-book-user"></i>
+        <span>Biography</span>
+    </button>
+</div>
+
+<section name="appearance" class="window-content extra-content">
+    <fieldset id="physical">
+        <legend>Physical
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="physical" tabindex="-1" {{checked locks.physical}}>
+                <span class="fas lock"></span>
+            </label>
+        </legend>
+        <form>
+            <div class="form-group">
+                <label>Age</label>
+                <label class="checkbox zero-width">
+                    <input class="lock-btn hide" type="checkbox" for="age" tabindex="-1">
+                    <span class="fas lock"></span>
+                </label>
+                <input name="age" type="text" value="{{biography.physical.age}}">
+            </div>
+            <div class="form-group">
+                <label>Hair</label>
+                <input name="hair" type="text" value="{{biography.physical.hair}}">
+            </div>
+            <div class="form-group">
+                <label>Skin</label>
+                <input name="skin" type="text" value="{{biography.physical.skin}}">
+            </div>
+            <div class="form-group">
+                <label>Eyes</label>
+                <input name="eyes" type="text" value="{{biography.physical.eyes}}">
+            </div>
+            <div class="form-group">
+                <label>Sex</label>
+                <label class="checkbox zero-width">
+                    <input class="lock-btn hide" type="checkbox" for="sex" tabindex="-1">
+                    <span class="fas lock"></span>
+                </label>
+                <input name="sex" type="text" value="{{biography.physical.sex}}">
+            </div>
+            <div class="form-group">
+                <label>Height (ft)</label>
+                <input name="height" type="text" value="{{biography.physical.height}}">
+            </div>
+            <div class="form-group">
+                <label>Weight (lbs)</label>
+                <input name="weight" type="text" value="{{biography.physical.weight}}">
+            </div>
+        </form>
+    </fieldset>
+    <fieldset id="clothing" style="display:none;">
+        <legend>Clothing and others
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="clothing" tabindex="-1" {{checked locks.clothing}}>
+                <span class="fas lock"></span>
+            </label>
+        </legend>
+    </fieldset>
+    {{#each biography.clothing}}
+        <p>{{{this}}}</p>
+    {{/each}}
+</section>
+
+<section name="biography" class="window-content extra-content">
+    <fieldset id="personality">
+        <legend>Personality
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="personality" tabindex="-1" {{checked locks.personality}}>
+                <span class="fas lock"></span>
+            </label>
+        </legend>
+        {{#each biography.personality}}
+            <p>{{{this}}}</p>
+        {{/each}}
+        {{#each biography.flaws}}
+            <p class="flaw">{{{this}}}</p>
+        {{/each}}
+    </fieldset>
+    <fieldset id="ideals">
+        <legend>Ideals
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="ideals" tabindex="-1" {{checked locks.ideals}}>
+                <span class="fas lock"></span>
+            </label>
+        </legend>
+        {{#each biography.ideals}}
+            <p>{{{this}}}</p>
+        {{/each}}
+    </fieldset>
+    <fieldset id="bonds">
+        <legend>Bonds
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="bonds" tabindex="-1" {{checked locks.bonds}}>
+                <span class="fas lock"></span>
+            </label>
+        </legend>
+        {{#each biography.bonds}}
+            <p>{{{this}}}</p>
+        {{/each}}
+    </fieldset>
+    <fieldset id="plot">
+        <legend>Plot Hook Idea
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="plot" tabindex="-1" {{checked locks.plot}}>
+                <span class="fas lock"></span>
+            </label>
+        </legend>
+        {{#each biography.plot}}
+            <p>{{{this}}}</p>
+        {{/each}}
+    </fieldset>
+</section>
+
+<form autocomplete="off">
+
+    <!-- Details Tab -->
+    <h3 class="form-header"><i class="fas fa-user"></i> Character Details</h3>
+    <p class="notes">Create your NPC ASAP with ease.</p>
+    <p class="notes">You can select some traits or randomize everything! Try your luck.</p>
+
+    <div class="form-group">
+        <label>Name Generator</label>
+        <div class="form-fields">
+            <select id="generator" name="gridType" data-dtype="Number">
+                {{ selectOptionsNoEscape indexes.names selected=selection.names }}
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <div id="names" class="form-fields">
+            <div id="name1">
+                <label class="checkbox">
+                    <input class="lock-btn hide" type="checkbox" for="name1" tabindex="-1" {{checked locks.name1}}/>
+                    <span class="fas lock"></span>
+                </label>
+                <input type="text" name="name1" placeholder="Name" value="{{name1}}"/>
+            </div>
+            <div id="name2">
+                <label class="checkbox">
+                    <input class="lock-btn hide" type="checkbox" for="name2" tabindex="-1" {{checked locks.name2}}/>
+                    <span class="fas lock"></span>
+                </label>
+                <input type="text" name="name2" placeholder="Surname" value="{{name2}}"/>
+            </div>
+            <div id="name3" {{#unless name3}}class="hide"{{/unless}}>
+                <label class="checkbox">
+                    <input class="lock-btn hide" type="checkbox" for="name3" tabindex="-1" {{checked locks.name3}}/>
+                    <span class="fas lock"></span>
+                </label>
+                <input type="text" name="name3" placeholder="Surname" value="{{name3}}"/>
+            </div>
+
+        </div>
+    </div>
+    <p id="explanation" class="notes">The first name means ow shit! I got hit again!</p>
+
+    <div class="picture">
+        <img class="file-picker2" data-type="image" data-target="portrait" width="100" height="100" title="Portrait" {{#if portrait}}src="{{portrait}}"{{else}}src="icons/svg/circle.svg"{{/if}}>
+    </div>
+    
+    <div class="form-group">
+        <label>Portrait</label>
+        <div class="form-fields">
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="portrait" tabindex="-1" {{checked locks.portrait}}/>
+                <span class="fas lock"></span>
+            </label>
+            <input type="text" name="portrait" value="{{portrait}}"/>
+            <button type="button" class="file-picker2" data-type="image" data-target="portrait" title="Browse Files" tabindex="-1">
+                <i class="fas fa-file-import fa-fw"></i>
+            </button>
+            <button id="portrait-filter" type="button" tabindex="-1">
+                <i class="fas fa-box-open"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label>Race</label>
+        <div class="form-fields">
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="races" tabindex="-1" {{checked locks.races}}/>
+                <span class="fas lock"></span>
+            </label>
+            <select name="races" data-dtype="String">
+                {{ selectOptionsNoEscape indexes.races selected=selection.races }}
+            </select>
+            <span class="npc-info">{{race.name}}</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Job</label>
+        <div class="form-fields">
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="jobs" tabindex="-1" {{checked locks.jobs}}/>
+                <span class="fas lock"></span>
+            </label>
+            <select name="jobs" data-dtype="String">
+                {{ selectOptionsNoEscape indexes.jobs selected=selection.jobs }}
+            </select>
+            <span class="npc-info">{{job.name}}</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Challenge Rating</label>
+        <div class="form-fields">
+            <input type="range" name="cr" value="1" min="0" step="1" class="cr-slider" max="23" />
+            <span class="range-value cr">{{cr}}</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Seed</label>
+        <div class="form-fields">
+            <label class="checkbox">
+                <input class="lock-btn hide" type="checkbox" for="seed" tabindex="-1" {{checked locks.seed}}/>
+                <span class="fas lock"></span>
+            </label>
+            <input type="number" name="seed" min="0" max="999999" />
+        </div>
+    </div>
+
+    {{#if hasFolders}}
+    <div class="form-group">
+        <label>{{ localize "DOCUMENT.Folder" }}</label>
+        <div class="form-fields">
+            <select name="folder">
+                <option value=""></option>
+                {{ selectOptions folders selected=folder valueAttr="id" labelAttr="name" }}
+            </select>
+        </div>
+    </div>
+    {{/if}}
+
+    {{#with generation}}
+    <div class="form-group">
+        <label for="npcgen-hp-level">HP level</label>
+        <div class="form-fields">
+            <select id="npcgen-hp-level" name="hpLevel">{{selectOptions hpLevels selected=hpLevel}}</select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="npcgen-disposition">Token disposition</label>
+        <div class="form-fields">
+            <select id="npcgen-disposition" name="disposition">{{selectOptions dispositions selected=disposition}}</select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Token options</label>
+        <div class="form-fields">
+            <label class="checkbox"><input type="checkbox" name="generic" {{checked generic}}> Generic NPC</label>
+            <label class="checkbox" data-named><input type="checkbox" name="actorLink" {{checked actorLink}}> Link actor data</label>
+            <label class="checkbox"><input type="checkbox" name="lockRotation" {{checked lockRotation}}> Lock rotation</label>
+        </div>
+    </div>
+    <div class="form-group" data-named>
+        <label for="npcgen-token-name-mode">Token name</label>
+        <div class="form-fields">
+            <select id="npcgen-token-name-mode" name="tokenNameMode">{{selectOptions tokenNames selected=tokenNameMode}}</select>
+            <input type="text" name="customTokenName" value="{{customTokenName}}" aria-label="Custom token name" data-custom-token>
+        </div>
+    </div>
+    <div class="form-group" data-generic>
+        <label for="npcgen-quantity">Quantity</label>
+        <div class="form-fields">
+            <input id="npcgen-quantity" name="quantity" type="number" min="1" step="1" value="{{quantity}}">
+            <label class="checkbox"><input type="checkbox" name="randomRace" {{checked randomRace}}> Random race</label>
+            <label class="checkbox"><input type="checkbox" name="randomSex" {{checked randomSex}}> Random sex</label>
+        </div>
+    </div>
+    {{/with}}
+
+    <button id="randomizer" type="button" tabindex="-1">
+        <i class="fas fa-dice-d20"></i>
+    </button>
+
+    <!-- Form Submission -->
+    <button id="create" type="button">
+        <i class="fas fa-users-cog"></i>Create
+    </button>
+</form>
+{{/with}}
