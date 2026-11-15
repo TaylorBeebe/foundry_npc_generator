@@ -218,6 +218,38 @@ if (args.mcp) {
     process.exit(0);
 }
 
+if (args.bio) {
+    const { gen_table } = await imp('module/bio.js');
+    const gate = Promise.withResolvers();
+    let loads = 0;
+    globalThis.fetch = async (url) => {
+        const table = url.match(/tables\/(.+)\/base\.csv$/)?.[1];
+        if (table === 'delayed') {
+            loads++;
+            await gate.promise;
+            return new Response('One trait,1');
+        }
+        if (table === 'filtered')
+            return new Response('Requires tag,1,rare\nExcluded,1,,common\nDisabled,0');
+        if (table === 'cycle')
+            return new Response('A loop [cycle.base],1');
+        if (table === 'empty')
+            return new Response('');
+        return new Response(null, { status: 404 });
+    };
+    const tags = new Set(['common']);
+    const first = gen_table('delayed', 2, 2, tags);
+    const second = gen_table('delayed', 1, 1, tags);
+    gate.resolve();
+    assert.deepEqual(await Promise.all([first, second]), [['One trait'], ['One trait']]);
+    assert.equal(loads, 1);
+    for (const table of ['filtered', 'missing', 'empty'])
+        assert.deepEqual(await gen_table(table, 1, 1, tags), []);
+    assert.deepEqual(await gen_table('cycle', 1, 1, tags), ['A loop ']);
+    log('Biography checks passed.');
+    process.exit(0);
+}
+
 if (args.dialog) {
     const { checkDialog } = await import('./dialog-check.mjs');
     const template = fs.readFileSync(path.join(moduleDir, 'templates/menu.html'), 'utf8');
@@ -373,6 +405,9 @@ if (args.smoke) {
 
     const config = { name1: 'Luna', name2: 'Stone', job: 'fighter', race: 'dwarf', cr: '3', seed: 7919, biography: { physical: { sex: 'Female' } } };
     const draft = await new NPCDraft(config).prepare();
+    const zeroCon = await new NPCDraft({ ...config, race: 'human', job: 'priest', cr: 2 }).prepare();
+    assert.equal(zeroCon.mod('con'), 0);
+    assert.match(zeroCon.data.system.attributes.hp.formula, /^\d+d\d+$/);
     const parry = await draft.feature('Parry');
     assert.equal(Object.values(parry.system.activities)[0].type, 'utility');
     assert.equal(Object.values(parry.system.activities)[0].activation.type, 'reaction');

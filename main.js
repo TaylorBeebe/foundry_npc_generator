@@ -37,6 +37,7 @@ async function ready() {
             app.render(true);
         });
     });
+    Hooks.on('getActorContextOptions', contextMenu);
     Hooks.on('getActorDirectoryEntryContext', contextMenu);
     Hooks.on('renderNPCGenerator', app._renderNPCGenerator);
     ui.actors.render(true);

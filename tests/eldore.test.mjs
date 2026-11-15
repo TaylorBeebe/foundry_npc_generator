@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import test from 'node:test';
 
 function run(args, env = process.env) {
-    const result = spawnSync(process.execPath, args, { encoding: 'utf8', env });
+    const result = spawnSync(process.execPath, args, { encoding: 'utf8', env, timeout: 15000 });
     assert.ifError(result.error);
     assert.equal(result.status, 0, result.stderr + result.stdout);
     return result.stdout;
@@ -14,6 +14,10 @@ function run(args, env = process.env) {
 
 test('dialog controls reach the created actor and token documents', () => {
     assert.match(run(['tools/hp-check.mjs', '--dialog']), /Dialog checks passed/);
+});
+
+test('biography tables share pending loads and stop when no rows are eligible', () => {
+    assert.match(run(['tools/hp-check.mjs', '--bio']), /Biography checks passed/);
 });
 
 test('MCP bridge enforces write permissions and creates an Eldore actor', () => {

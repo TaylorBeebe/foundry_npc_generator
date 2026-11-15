@@ -101,6 +101,7 @@ export class NPCGenerator extends FormApplication {
         name1: '',
         name2: '',
         name3: '',
+        seed: '',
         locks: {
             name1: false,
             name2: false,
@@ -108,7 +109,6 @@ export class NPCGenerator extends FormApplication {
             portrait: false,
             races: false,
             jobs: false,
-            seed: false,
             physical: false,
             clothing: false,
             personality: false,
@@ -265,11 +265,11 @@ export class NPCGenerator extends FormApplication {
         else if (el.type === 'select-one') {
             if (el.name === 'races') {
                 this._randomizeRace();
-                this._randomizeBio();
+                await this._randomizeBio();
             }
             else if (el.name === 'jobs') {
                 this._randomizeJob();
-                this._randomizeBio();
+                await this._randomizeBio();
             }
         }
         // Maybe submit the form
@@ -640,8 +640,11 @@ export class NPCGenerator extends FormApplication {
             const portrait = control('portrait').value;
             const samePortrait = Boolean(portrait && portrait === data.portrait);
             const seedInput = control('seed');
-            const seed = app.getCheckBox('seed') && seedInput.value ? Number(seedInput.value) : Math.floor(Math.random() * 1000000);
-            seedInput.value = String(seed);
+            const seed = seedInput.value === '' ? Math.floor(Math.random() * 1000000) : Number(seedInput.value);
+            if (seedInput.validity?.badInput || !Number.isInteger(seed) || seed < 0 || seed > 999999) {
+                ui.notifications.warn('Enter a whole-number seed from 0 to 999999.');
+                return;
+            }
             for (const name of Object.keys(data.biography.physical))
                 app.getPhysicalInput(name);
             const input = {

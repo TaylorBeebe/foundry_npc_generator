@@ -1,4 +1,13 @@
-# Eldore changes to NPC Generator 1.28.3
+# Eldore changelog
+
+## 1.28.5
+
+- Restored **Build NPC** on the Foundry v14 actor menu and kept the legacy hook with duplicate protection. The dialog restores the actor’s saved name, race, job, CR, and seed.
+- A seed entered in the dialog, including `0`, is used for the first draft. Blank seeds are randomized. Low and Standard use one attempt. Original still retries with a fresh seed if validation fails.
+- Biography draws share the pending CSV load. They skip unavailable, ineligible, and exhausted tables instead of throwing or spinning, including recursive draws.
+- HP formulas omit a zero Constitution term. HP calculations and caps are unchanged.
+
+## 1.28.3
 
 - Set the package ID and settings namespace to `npc-generator-dnd5e-eldore`, including asset paths, Babele description flags, and generator lookups. Removed the upstream install and download URLs from the private fork manifest to avoid pointing updates at the original. Actor metadata stays under `flags.npcgen`. Enable only one generator at a time. Pack files were copied byte for byte.
 - Added Low, Standard, and Original budget HP modes, a world multiplier, and a per-NPC mode selector. Low starts at `10 + 5.5 × CR`, with +8% for martial jobs and −15% for other casters. Standard starts at `12 + 20 × CR`. Original uses the XP/offense/AC/resistance budget, subtracts temporary HP and effective HP bonuses once, and accounts for cursed-axe effective HP separately from Constitution. All modes round to whole dice and cap at `floor(6 + 2 × CR)` before validation. Low and Standard bypass the Original-mode HP-versus-offense and minimum dice-versus-CR/caster-level checks so low targets do not cause retries.

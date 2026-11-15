@@ -1,9 +1,20 @@
 import { DB } from './names.js';
-import { between, normalRandomAdjusted, pick, pick_weights, seeder } from './utils.js';
+import { between, logger, normalRandomAdjusted, pick, pick_weights, seeder } from './utils.js';
 const AGE_CATEGORIES = ['young', 'adult', 'middle age', 'old', 'venerable', 'supernaturally old'];
 const WEIGHT_CATEGORIES = ['underweight', 'fit', 'fat', 'obese'];
 const HEIGHT_CATEGORIES = ['short', 'average-height', 'tall', 'giant'];
-const TABLES = {};
+const TABLES = Object.create(null);
+async function loadTable(table) {
+    try {
+        const db = new DB('tables/' + table.replaceAll('.', '/'));
+        await db.load();
+        return db.data;
+    } catch (error) {
+        delete TABLES[table];
+        logger.warn(error.message);
+        return [];
+    }
+}
 async function parseDraw(text, tags, drawMap = new Set()) {
     let matches = [];
     let arrMatches = null;
@@ -24,46 +35,48 @@ async function draw(table, tags, drawMap = new Set()) {
     const notTable = /'(.*)'/.exec(table);
     if (notTable)
         return notTable[1];
-    let db = TABLES[table];
-    if (!db) {
-        db = TABLES[table] = new DB('tables/' + table.replaceAll('.', '/'));
-        await db.load();
+    const db = await (TABLES[table] ??= loadTable(table));
+    const eligible = [];
+    const weights = [];
+    for (const [index, row] of db.entries()) {
+        const [text, weight, condition, exclusion] = row;
+        const id = table + ':' + index;
+        const chance = weight ? Number(weight) : 1;
+        if (!text || !Number.isFinite(chance) || chance <= 0 || drawMap.has(id))
+            continue;
+        if (condition && !condition.split(',').some((tag) => tags.has(tag)))
+            continue;
+        if (exclusion && exclusion.split(',').some((tag) => tags.has(tag)))
+            continue;
+        eligible.push({ row, id });
+        weights.push(chance);
     }
-    const weights = db.data.map(([text, weight]) => (weight ? +weight : 1));
-    while (true) {
-        const pick = pick_weights(db.data, weights);
-        const [text, weight, condition, exclusion, addition] = pick;
-        if (condition && !condition.split(',').some((el) => tags.has(el)))
-            continue;
-        if (exclusion && exclusion.split(',').some((el) => tags.has(el)))
-            continue;
-        const id = table + db.data.indexOf(pick);
-        if (drawMap.has(id))
-            continue;
-        drawMap.add(id);
-        if (addition)
-            addition.split(',').forEach((tag) => tags.add(tag));
-        return (await parseDraw(text, tags, drawMap))
-            .replaceAll(/( |^)a (?=[aeiou])/g, '$1an ')
-            .replaceAll(/he\/she/gi, (match) => {
+    if (!eligible.length)
+        return '';
+    const { row: [text, , , , addition], id } = pick_weights(eligible, weights);
+    drawMap.add(id);
+    if (addition)
+        addition.split(',').forEach((tag) => tags.add(tag));
+    return (await parseDraw(text, tags, drawMap))
+        .replaceAll(/( |^)a (?=[aeiou])/g, '$1an ')
+        .replaceAll(/he\/she/gi, (match) => {
             if (match[0] === 'h')
                 return tags.pronoun.nominal;
             else
                 return tags.pronoun.nominal.titleCase();
         })
-            .replaceAll(/him\/her/gi, (match) => {
+        .replaceAll(/him\/her/gi, (match) => {
             if (match[0] === 'h')
                 return tags.pronoun.possessive1;
             else
                 return tags.pronoun.possessive1.titleCase();
         })
-            .replaceAll(/his\/her/gi, (match) => {
+        .replaceAll(/his\/her/gi, (match) => {
             if (match[0] === 'h')
                 return tags.pronoun.possessive2;
             else
                 return tags.pronoun.possessive2.titleCase();
         });
-    }
 }
 function categorize(value, range, category) {
     const step = range / (category.length - 1);
@@ -135,9 +148,14 @@ export function gen_physical(race, job, cr, tags) {
 }
 export async function gen_table(table, min, max, tags) {
     const drawMap = new Set();
-    const traits = new Array(between(min, max));
-    for (let i = 0; i < traits.length; i++)
-        traits[i] = await draw(`${table}.base`, tags, drawMap);
+    const traits = [];
+    const count = between(min, max);
+    for (let i = 0; i < count; i++) {
+        const trait = await draw(`${table}.base`, tags, drawMap);
+        if (!trait)
+            break;
+        traits.push(trait);
+    }
     return traits;
 }
 // Debug - DELETE LATER

@@ -1,5 +1,13 @@
 # Eldore verification
 
+## 1.28.5 regression checks
+
+- [ ] In Foundry v14, right-click a generated Dragonborn Ranger and confirm **Build NPC** appears once. Verify the dialog restores the actor’s name, race, job, CR, and saved seed. Close it and verify the actor directory is unchanged.
+- [ ] In **Generate NPC**, select Human / Berserker / CR 5 / Low. Create twice with seed `5001` and compare the resulting stat blocks and `flags.npcgen.seed`. Repeat in Standard. Check that `0` works and a blank field chooses a fresh seed. Original can choose a new seed after a failed first draft.
+- [ ] In a fresh Foundry session, immediately change race and job after opening **Generate NPC**. Verify the biography populates once its tables load, with no console error or stalled dialog.
+- [ ] Inspect the HP formula of an NPC with zero Constitution modifier. It should show only the dice.
+- [ ] If testing MCP, confirm the local server lists `eldore_generate_npc`. The Foundry query alone does not advertise an MCP tool. For server 0.8.3, run `node tools/install-eldore-mcp.cjs "<path to packages/mcp-server>" --check`, then run it without `--check` to install the server-side tool registration and handler. Fully restart the MCP client afterward. Both Foundry modules must be active, with a GM session and bridge writes enabled.
+
 ## Portrait Studio naming
 
 - [ ] Point the Forge portrait and token settings at the uploaded NPC library. Both settings may target the same folder when portraits and tokens are stored together.
@@ -12,6 +20,10 @@ From the module folder in PowerShell, run these commands with Node 24.
 
 ```powershell
 node tools/hp-check.mjs --module=C:/Users/taylo/Downloads/npc-generator-dnd5e
+npm test
+node tools/hp-check.mjs --dialog
+node tools/hp-check.mjs --bio
+node tools/hp-check.mjs --mcp
 node tools/hp-check.mjs --smoke
 node tools/hp-check.mjs --hp=standard
 node tools/hp-check.mjs --hp=original

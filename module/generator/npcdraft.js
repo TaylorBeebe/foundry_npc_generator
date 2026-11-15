@@ -89,14 +89,18 @@ export class NPCDraft {
         try {
             let draft;
             let nextData = data;
-            for (let i = 0; i < DRAFT_RETRIES; i++) {
+            const hpLevel = data.hpLevel ?? game.settings.get(MODULE, 'hp-level');
+            const attempts = hpLevel === 'original' ? DRAFT_RETRIES : 1;
+            for (let i = 0; i < attempts; i++) {
                 draft = await new NPCDraft(nextData, options).prepare();
                 if (draft.validate()) {
                     logger.debug('Draft Difficulty: ' + i);
                     return await draft.createActor();
                 }
-                logger.debug('Draft off parameters, creating new Draft. ' + draft.print());
-                nextData = { ...data, seed: Math.floor(Math.random() * 1000000) };
+                if (i + 1 < attempts) {
+                    logger.debug('Draft off parameters, creating new Draft. ' + draft.print());
+                    nextData = { ...data, seed: Math.floor(Math.random() * 1000000) };
+                }
             }
             const actor = await draft.createActor();
             logger.warn('This draft is off parameter. ' + draft.print());
@@ -1418,7 +1422,7 @@ export class NPCDraft {
         const hp_new = Math.max(1, Math.floor(hit_dice * ((die + 1) / 2 + con)));
         const conTotal = con * hit_dice;
         this.data.system.attributes.hp = {
-            formula: `${hit_dice}d${die} ${conTotal < 0 ? "-" : "+"} ${Math.abs(conTotal)}`,
+            formula: `${hit_dice}d${die}` + (conTotal ? ` ${conTotal < 0 ? "-" : "+"} ${Math.abs(conTotal)}` : ''),
             value: hp_new,
             max: hp_new,
             temp,
@@ -1631,8 +1635,8 @@ export class NPCDraft {
             TOKENIZER() &&
             game.settings.get(MODULE, 'tokenizer'))
             await tokenize(actor);
-        logger.log(`NPC Generated. ${actor.name} (#${seeder.SEED})`);
-        ui.notifications.notify(`NPC Created! ${actor.name} (#${seeder.SEED})`);
+        logger.log(`NPC Generated. ${actor.name} (#${this.seed})`);
+        ui.notifications.notify(`NPC Created! ${actor.name} (#${this.seed})`);
         return (this.actor = actor);
     }
     print() {

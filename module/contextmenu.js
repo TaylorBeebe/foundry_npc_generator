@@ -1,5 +1,5 @@
-import { jobs } from './generator/jobs.js';
-import { races } from './generator/races.js';
+import { jobs, references as jobOptions } from './generator/jobs.js';
+import { races, references as raceOptions } from './generator/races.js';
 import { app } from './menu.js';
 const raceLookup = (race) => {
     race = race?.toLowerCase();
@@ -17,11 +17,17 @@ const convertCR = (cr) => {
     return conversion[cr];
 };
 export default function contextMenu(_html, entryOptions) {
+    if (entryOptions.some((entry) => entry.name === 'Build NPC'))
+        return;
     entryOptions.push({
         name: 'Build NPC',
         icon: '<i class="fas fa-users-cog"></i>',
         callback: (li) => {
-            const actor = game.actors.get(li.dataset.documentId ?? '');
+            const { entryId, documentId } = (li?.dataset ?? li?.[0]?.dataset) ?? {};
+            const id = entryId || documentId;
+            const actor = id && game.actors.get(id);
+            if (!actor)
+                return;
             const data = foundry.utils.mergeObject({}, app._defaultObject);
             const race_name = raceLookup(actor.name);
             const name = race_name ? [''] : actor.name.split(' ');
@@ -36,6 +42,12 @@ export default function contextMenu(_html, entryOptions) {
             data.name3 = actor.flags.npcgen?.name3;
             data.race = race ?? races.human;
             data.job = job;
+            data.selection = {
+                ...data.selection,
+                races: Object.keys(raceOptions).find((key) => raceOptions[key] === data.race) ?? 0,
+                jobs: Object.keys(jobOptions).find((key) => jobOptions[key] === data.job) ?? 0,
+            };
+            data.seed = actor.flags.npcgen?.seed ?? '';
             data.cr = convertCR(actor.system.details.cr);
             data.portrait = actor.img ?? '';
             data.token = actor.prototypeToken.texture.src ?? '';

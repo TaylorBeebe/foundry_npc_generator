@@ -42,6 +42,10 @@ async function readDB(db) {
     let array = [[]];
     let arrMatches = null;
     while ((arrMatches = pattern.exec(data))) {
+        if (!arrMatches[0]) {
+            pattern.lastIndex++;
+            continue;
+        }
         var strMatchedDelimiter = arrMatches[1];
         if (strMatchedDelimiter.length && strMatchedDelimiter !== ',')
             array.push([]);

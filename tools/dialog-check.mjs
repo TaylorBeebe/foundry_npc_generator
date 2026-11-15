@@ -9,12 +9,12 @@ function mockForm(template, formData) {
         const attributes = before + after;
         if (name === 'folder' && !formData.object.hasFolders)
             continue;
-        const selected = tag === 'select' && template.match(new RegExp('name="' + name + '"[^>]*>\\{\\{selectOptions \\w+ selected=(\\w+)'));
+        const selected = tag === 'select' && template.match(new RegExp('name="' + name + '"[^>]*>\\s*\\{\\{\\s*selectOptions(?:NoEscape)? [\\w.]+ selected=([\\w.]+)'));
         const checked = attributes.match(/\{\{checked (\w+)\}\}/)?.[1];
         const value = attributes.match(/\bvalue="\{\{([^}]+)\}\}"/)?.[1];
         const read = (key) => key.split('.').reduce((object, field) => object?.[field], formData.object);
         fields.set(name, {
-            value: String((selected ? generation[selected[1]] : value ? (generation[value] ?? read(value)) : '') ?? ''),
+            value: String((selected ? (generation[selected[1]] ?? read(selected[1])) : value ? (generation[value] ?? read(value)) : '') ?? ''),
             checked: Boolean(generation[checked]),
         });
     }
@@ -24,7 +24,7 @@ function mockForm(template, formData) {
             return selectors.get(selector);
         const field = selector.match(/^(?:fieldset input|input)?\[name="?([\w]+)"?\]$/)?.[1];
         const lock = selector.match(/^:checkbox\[for=(\w+)\]$/)?.[1];
-        const elements = field && fields.has(field) ? [fields.get(field)] : lock ? [{ checked: lock === 'seed' }] : [];
+        const elements = field && fields.has(field) ? [fields.get(field)] : lock ? [{ checked: Boolean(formData.object.locks[lock]) }] : [];
         const selection = Object.assign(elements, {
             on(event, handler) { events.set(selector + ':' + event, handler); return this; },
             prop(key, value) { this[key] = value; return this; },
@@ -52,6 +52,7 @@ export async function checkDialog({ imp, template, settings, seeder }) {
     globalThis.FormApplication = class {
         position = {};
         filepickers = [];
+        render() { this.rendered = true; }
     };
     globalThis.Handlebars = { registerHelper() {} };
     globalThis.FilePicker = class {};
@@ -82,9 +83,47 @@ export async function checkDialog({ imp, template, settings, seeder }) {
         'token-lock-rotation': false,
     });
     game.folders.filter = () => [{ id: 'test-folder', type: 'Actor', displayed: true }];
-    const { NPCGenerator } = await imp('module/menu.js');
-    const { jobs } = await imp('module/generator/jobs.js');
-    const { races } = await imp('module/generator/races.js');
+    const { NPCGenerator, app: buildApp } = await imp('module/menu.js');
+    const { jobs, references: jobOptions } = await imp('module/generator/jobs.js');
+    const { races, references: raceOptions } = await imp('module/generator/races.js');
+
+    const callbacks = new Map();
+    Hooks.on = Hooks.once = (event, callback) => callbacks.set(event, callback);
+    ui.actors = { render() {} };
+    game.user.hasPermission = () => true;
+    await imp('main.js');
+    await callbacks.get('ready')();
+    const entries = [];
+    callbacks.get('getActorContextOptions')(null, entries);
+    callbacks.get('getActorDirectoryEntryContext')(null, entries);
+    assert.equal(entries.length, 1);
+    assert.equal(entries[0].name, 'Build NPC');
+
+    const existing = {
+        name: 'Mira Thorn',
+        flags: { npcgen: { name1: 'Mira', name2: 'Thorn', race: 'dragonborn', job: 'ranger', seed: 144426 } },
+        system: { details: { cr: 3, type: {} } },
+        prototypeToken: { texture: {} },
+    };
+    game.actors = new Map([['existing', existing]]);
+    entries[0].callback({ dataset: { entryId: 'missing' } });
+    assert.equal(buildApp.rendered, undefined);
+    for (const entry of [{ dataset: { entryId: 'existing', documentId: 'missing' } },
+        [{ dataset: { documentId: 'existing' } }]]) {
+        entries[0].callback(entry);
+        assert.equal(buildApp.rendered, true);
+        const form = mockForm(template, await buildApp.getData());
+        assert.equal(form.fields.get('name1').value, 'Mira');
+        assert.equal(form.fields.get('name2').value, 'Thorn');
+        assert.equal(raceOptions[form.fields.get('races').value], races.dragonborn);
+        assert.equal(jobOptions[form.fields.get('jobs').value], jobs.ranger);
+        assert.equal(buildApp.object.cr, '3');
+        assert.equal(form.fields.get('seed').value, '144426');
+        assert.equal(actors.length, 0);
+    }
+    existing.flags.npcgen.seed = 0;
+    entries[0].callback({ dataset: { entryId: 'existing' } });
+    assert.equal(mockForm(template, await buildApp.getData()).fields.get('seed').value, '0');
 
     async function openDialog(cr, race, job) {
         const app = new NPCGenerator();
@@ -115,6 +154,7 @@ export async function checkDialog({ imp, template, settings, seeder }) {
     assert.equal(actor.name, 'Luna Stone');
     assert.equal(actor.folder, 'test-folder');
     assert.equal(actor.flags.npcgen.hpLevel, 'standard');
+    assert.equal(actor.flags.npcgen.seed, 7919);
     assert.ok(actor.system.attributes.hp.max >= 60);
     assert.equal(actor.prototypeToken.name, 'Captain');
     assert.equal(actor.prototypeToken.actorLink, true);
@@ -153,4 +193,39 @@ export async function checkDialog({ imp, template, settings, seeder }) {
         assert.match(copy.name, new RegExp('^A .+ ' + flags.biography.physical.sex[0] + ' Commoner$'));
     }
     assert.deepEqual(warnings, []);
+
+    const seeded = await openDialog('5', races.human, jobs.berserker);
+    seeded.fields.get('name1').value = 'Seeded';
+    seeded.fields.get('seed').value = '5001';
+    await seeded.submit();
+    await seeded.submit();
+    const [first, second] = actors.slice(-2);
+    assert.equal(first.flags.npcgen.seed, 5001);
+    assert.equal(second.flags.npcgen.seed, 5001);
+    assert.deepEqual(first.system, second.system);
+
+    seeded.fields.get('seed').value = '0';
+    await seeded.submit();
+    assert.equal(actors.at(-1).flags.npcgen.seed, 0);
+    seeded.fields.get('seed').value = '1.5';
+    const count = actors.length;
+    await seeded.submit();
+    assert.equal(actors.length, count);
+    assert.deepEqual(warnings.splice(0), ['Enter a whole-number seed from 0 to 999999.']);
+
+    const { NPCDraft } = await imp('module/generator/npcdraft.js');
+    const validate = NPCDraft.prototype.validate;
+    let attempts = 0;
+    NPCDraft.prototype.validate = () => { attempts++; return false; };
+    seeded.fields.get('seed').value = '5001';
+    try {
+        for (const hpLevel of ['low', 'standard']) {
+            seeded.fields.get('hpLevel').value = hpLevel;
+            await seeded.submit();
+            assert.equal(actors.at(-1).flags.npcgen.seed, 5001);
+        }
+        assert.equal(attempts, 2);
+    } finally {
+        NPCDraft.prototype.validate = validate;
+    }
 }
