@@ -1,5 +1,9 @@
 # Eldore changelog
 
+## 1.28.6
+
+- Register **Build NPC** before the Actors sidebar first renders so Foundry v14 includes it in the cached context menu. The entry uses the v14 label and click handler and retains compatibility with the legacy menu.
+
 ## 1.28.5
 
 - Restored **Build NPC** on the Foundry v14 actor menu and kept the legacy hook with duplicate protection. The dialog restores the actor’s saved name, race, job, CR, and seed.

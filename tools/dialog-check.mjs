@@ -90,14 +90,31 @@ export async function checkDialog({ imp, template, settings, seeder }) {
     const callbacks = new Map();
     Hooks.on = Hooks.once = (event, callback) => callbacks.set(event, callback);
     ui.actors = { render() {} };
-    game.user.hasPermission = () => true;
+    game.release = { generation: 14 };
+    let canCreate = false;
+    game.user.hasPermission = (permission) => canCreate && permission === 'ACTOR_CREATE';
     await imp('main.js');
-    await callbacks.get('ready')();
     const entries = [];
+    // Foundry collects the menu before ready and retains those entries after it.
+    callbacks.get('getActorContextOptions')(null, entries);
+    callbacks.get('getActorDirectoryEntryContext')(null, entries);
+    assert.deepEqual(entries, []);
+    canCreate = true;
     callbacks.get('getActorContextOptions')(null, entries);
     callbacks.get('getActorDirectoryEntryContext')(null, entries);
     assert.equal(entries.length, 1);
-    assert.equal(entries[0].name, 'Build NPC');
+    assert.equal(entries[0].label, 'Build NPC');
+    assert.equal(typeof entries[0].onClick, 'function');
+    assert.equal('name' in entries[0], false);
+
+    game.release.generation = 13;
+    const legacy = [];
+    callbacks.get('getActorDirectoryEntryContext')(null, legacy);
+    callbacks.get('getActorContextOptions')(null, legacy);
+    assert.equal(legacy.length, 1);
+    assert.equal(legacy[0].name, 'Build NPC');
+    game.release.generation = 14;
+    await callbacks.get('ready')();
 
     const existing = {
         name: 'Mira Thorn',
@@ -106,11 +123,13 @@ export async function checkDialog({ imp, template, settings, seeder }) {
         prototypeToken: { texture: {} },
     };
     game.actors = new Map([['existing', existing]]);
-    entries[0].callback({ dataset: { entryId: 'missing' } });
+    await entries[0].onClick({}, { dataset: { entryId: 'missing' } });
     assert.equal(buildApp.rendered, undefined);
-    for (const entry of [{ dataset: { entryId: 'existing', documentId: 'missing' } },
-        [{ dataset: { documentId: 'existing' } }]]) {
-        entries[0].callback(entry);
+    for (const click of [
+        () => entries[0].onClick({}, { dataset: { entryId: 'existing', documentId: 'missing' } }),
+        () => legacy[0].callback([{ dataset: { documentId: 'existing' } }]),
+    ]) {
+        await click();
         assert.equal(buildApp.rendered, true);
         const form = mockForm(template, await buildApp.getData());
         assert.equal(form.fields.get('name1').value, 'Mira');
@@ -122,7 +141,7 @@ export async function checkDialog({ imp, template, settings, seeder }) {
         assert.equal(actors.length, 0);
     }
     existing.flags.npcgen.seed = 0;
-    entries[0].callback({ dataset: { entryId: 'existing' } });
+    await entries[0].onClick({}, { dataset: { entryId: 'existing' } });
     assert.equal(mockForm(template, await buildApp.getData()).fields.get('seed').value, '0');
 
     async function openDialog(cr, race, job) {

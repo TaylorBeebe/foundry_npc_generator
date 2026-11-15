@@ -1,5 +1,11 @@
 import { logger, searchPacks } from './module/utils.js';
+import contextMenu from './module/contextmenu.js';
 logger.log('Initializing...');
+
+// The Actors sidebar collects menu entries on its first render, before ready.
+Hooks.on('getActorContextOptions', contextMenu);
+Hooks.on('getActorDirectoryEntryContext', contextMenu);
+
 async function ready() {
     logger.log('Firing "ready" hook...');
     if (!game.user.hasPermission('ACTOR_CREATE')) {
@@ -12,7 +18,6 @@ async function ready() {
         logger.log('Babele detected. Loading compatibility layer...');
         import('./compatibility/babele.js');
     }
-    const { default: contextMenu } = await import('./module/contextmenu.js');
     const { NPCDraft } = await import('./module/generator/npcdraft.js');
     const { app } = await import('./module/menu.js');
     const { registerSettings, getDefaultFolder, migratePortraitDirectory } = await import('./module/settings.js');
@@ -37,8 +42,6 @@ async function ready() {
             app.render(true);
         });
     });
-    Hooks.on('getActorContextOptions', contextMenu);
-    Hooks.on('getActorDirectoryEntryContext', contextMenu);
     Hooks.on('renderNPCGenerator', app._renderNPCGenerator);
     ui.actors.render(true);
     logger.log('Initialized.');

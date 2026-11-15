@@ -2,7 +2,7 @@
     "id": "npc-generator-dnd5e-eldore",
     "title": "NPC Generator for DnD5e (Eldore)",
     "description": "Generate D&D 5e NPCs with configurable HP, equipment, spells, portrait and token matching, and generic batches.",
-    "version": "1.28.5",
+    "version": "1.28.6",
     "authors": [],
     "url": "https://github.com/TaylorBeebe/foundry_npc_generator",
     "bugs": "https://github.com/TaylorBeebe/foundry_npc_generator/issues",
